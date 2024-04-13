@@ -1,0 +1,95 @@
+*{
+    padding-top: 4px;
+    box-sizing: border-box;
+}
+
+.game-board {
+    
+    width: 1280px;
+    height: 590px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('../img-game/Grama.png');
+    background-repeat: no-repeat;
+}
+
+.house {
+    position: absolute;
+   
+    bottom: 60px;
+    right: 200px;
+
+}
+.door {
+    position: absolute;
+    bottom: 95px; /* Ajuste conforme necessário */
+    right: 236px; /* Ajuste conforme necessário */
+    width: 20px; /* Ajuste conforme necessário */
+    height: 20px; /* Ajuste conforme necessário */
+}
+
+.person {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url('/Game/img-game/player/player-idle-dow.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    animation: idle 1s steps(4) infinite; /* Define a animação padrão */
+}
+
+.person.moving-up {
+    animation-name: up;
+}
+
+.person.moving-down {
+    animation-name: down;
+}
+
+.person.moving-left {
+    animation-name: left;
+}
+
+.person.moving-right {
+    animation-name: right;
+}
+
+@keyframes up {
+    from { background-image: url('/Game/img-game/player/player-walk-up.gif'); }
+    to { background-image: url('/Game/img-game/player/player-walk-up.gif'); }
+}
+
+@keyframes down {
+    from { background-image: url('/Game/img-game/player/player-walk-down.gif'); }
+    to { background-image: url('/Game/img-game/player/player-walk-down.gif'); }
+}
+
+@keyframes left {
+    from { background-image: url('/Game/img-game/player/player-walk-left.gif'); }
+    to { background-image: url('/Game/img-game/player/player-walk-left.gif'); }
+}
+
+@keyframes right {
+    from { background-image: url('/Game/img-game/player/player-walk-right.gif'); }
+    to { background-image: url('/Game/img-game/player/player-walk-right.gif'); }
+}
+
+@keyframes idle {
+    from { background-image: url('/Game/img-game/player/player-idle-dow.gif'); }
+    to { background-image: url('/Game/img-game/player/player-idle-dow.gif'); }
+}
+
+#modal-casa1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+.modalGameActive {
+    visibility: hidden;
+}
+

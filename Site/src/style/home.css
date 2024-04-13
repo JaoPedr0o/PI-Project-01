@@ -1,0 +1,322 @@
+/* Formatações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    font-family: "Holtwood One SC", serif;
+}
+
+:root {
+    --common-gray: #515052;
+    --lightgray: #D9D9D9;
+    --white: #FFFFFA;
+    --red: #FF312E;
+    --blue: #2e82ff;
+    --black: #000000;
+    --button-hover: #222222;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--white);
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.content {
+    width: 144rem;
+    background: var(--white);
+}
+
+
+/* Estilo do cabeçalho */
+header {
+    height: 12rem;
+    width: 100%;
+    border-bottom: 0.7rem solid var(--black);
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    transition: background 0.5s;
+    background-image: url(/Site/assets/rotative-banner/fruits1-img.jpg);
+}
+
+header h1 {
+    margin: 0px;
+    font-size: 2.7rem;
+    color: var(--white);
+    width: 35rem;
+    height: 6rem;
+    background: var(--black);
+    text-align: center;
+    align-content: center;
+    bottom: -5.35rem;
+    border-top-right-radius: 1rem;
+}
+
+/* Formatação do Menu de Navegação Superior */
+#menu-nav {
+    height: 10rem;
+}
+
+#menu-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10rem;
+}
+
+.menu-item {
+    color: #000000;
+    list-style: none;
+    transition: all 0.2s;
+}
+
+.menu-item:hover {
+    margin-top: 0.3rem;
+    border-bottom: 1rem solid var(--red);
+}
+
+.menu-item a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.menu-item a #cart-icon {
+    background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 3.2rem;
+    height: 3.2rem;
+    transition: background 0.5s;
+}
+
+
+
+.menu-item-active {
+    border-bottom: 1rem solid var(--red);
+}
+
+/* Estilo da Lista da home */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 52rem;
+    width: 100%;
+    position: relative;
+}
+
+#home-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 60rem;
+    height: 48.5rem;
+    border-bottom: 1rem solid var(--black);
+}
+
+#home-list h3 {
+    font-size: 1.4rem;
+}
+
+#home-list ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+#home-list p a{
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    padding: 0.8rem;
+    border-radius: 1rem;
+    
+}
+
+#home-list ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 10.4rem;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    border: 2px solid var(--lightgray);
+    list-style: none;
+    gap: 0.5rem;
+}
+
+#home-list .home-list-wrapper {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.produtokg, .produtounit {
+    width: 5rem;
+}
+
+/* Estilo do preview do game */
+#game-view {
+    width: 60rem;
+    height: 48.5rem;
+    background-color: var(--black);
+    background-image: url(/Site/assets/icons/game-exemple.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-view h1 {
+    font-size: 2rem;
+}
+
+/* Formatação da modal da lista de compras */
+#modal-list {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000089;
+    border: 2px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    background-color: var(--white);
+    width: 128rem;
+    height: 64rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Título da modal */
+#modal-content h1 {
+    font-size: 2.4rem;
+}
+
+/* Botão de fechamento */
+#modal-content #close-list {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--black);
+    transition: color, background 0.2s;
+}
+#modal-content #close-list:hover {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--white);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--black);
+}
+#modal-content #close-list:active {
+    position: absolute;
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--white);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.5rem;
+    border: 2px solid var(--black);
+}
+
+#modal-content ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#modal-content ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+    height: 5rem;
+    border: 2px solid var(--common-gray);
+    list-style: none;
+    border-radius: 0.5rem;
+}
+
+/* Botão de remover item da lista */
+#modal-content ul li .btRemove {
+    color: var(--white);
+    background-color: var(--red);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+    border-radius: 0.5rem;
+    transition: color,background 0.2s;
+}
+#modal-content ul li .btRemove:hover {
+    color: var(--red);
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+    border-radius: 0.5rem;
+}
+
+/* Botão de adicionar mais item a lista */
+#modal-content ul li .btAdd {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+    transition: color,background 0.2s;
+}
+#modal-content ul li .btAdd:hover {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.5rem;
+}
+
+/* Classe que o js usa para abrir e fechar a modal */
+.modal-active {
+    visibility: hidden;
+}
+
+
+
+

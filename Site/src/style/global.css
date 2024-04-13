@@ -1,0 +1,25 @@
+/* Formatação global padrão para botões, inputs, textos... */
+
+/* Botões */
+.black-button {
+    background-color: var(--black);
+    color: var(--white);
+    width: auto;
+    padding: 0.5rem;
+    height: 100%;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    border: 0.2rem solid black;
+}
+
+.black-button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    width: auto;
+    padding: 0.5rem;
+    height: 100%;
+    font-size: 1.4rem;
+    border-radius: 0.5rem;
+}
+
