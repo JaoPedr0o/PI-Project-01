@@ -31,57 +31,57 @@
                     <li>
                         <img src="/Site/assets/fruits/mamao.png" alt="">
                         <div class="home-list-wrapper">
-                            <div>
+                            <div class="card-produto">
                                 <h3>Mamão</h3>
                                 <p>R$3,50 / KG</p>
                                 <label>KG:</label>
                                 <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00">
                                 <label>Unidade:</label>
-                                <input type="number" class="produtounit" name="Mamão" min="1" value="0">
+                                <input type="number" class="produtounit" id="qtd-unit-mamao" name="Mamão" min="1" value="0">
                             </div>
-                            <button class="black-button" onclick="adicionarCompra('Mamão', 3.50)">Adicionar à lista</button>
+                            <button class="black-button" onclick="adicionarCompra(this, 'Mamão', 3.50, document.getElementById('qtd-unit-mamao').value)">Adicionar à lista</button>
                         </div> 
                     </li>
                     <li>
                         <img src="/Site/assets/fruits/blueberry.png" alt="">
                         <div class="home-list-wrapper">
-                            <div>
+                            <div class="card-produto">
                                 <h3>Blueberry</h3>
                                 <p>R$4,00 / KG</p>
                                 <label>KG:</label>
-                                <input type="number" class="produtokg" name="Blueberry" min="0.00" step="0.25" value="0.00">
+                                <input type="number" class="produtounit" class="produtokg" name="Blueberry" min="0.00" step="0.25" value="0.00">
                                 <label>Unidade:</label>
-                                <input type="number" class="produtounit" name="blueberry" min="1" value="0">
+                                <input type="number" class="produtounit" id="qtd-unit-blueberry" name="blueberry" min="1" value="0">
                             </div>
-                            <button class="black-button" onclick="adicionarCompra('Blueberry', 4.00)">Adicionar à lista</button>
+                            <button class="black-button" onclick="adicionarCompra(this, 'Blueberry', 4.00, document.getElementById('qtd-unit-blueberry').value)">Adicionar à lista</button>
                         </div>
                     </li>
                     <li>
                         <img src="/Site/assets/fruits/laranja.png" alt="">
                         <div class="home-list-wrapper">
-                            <div>
+                            <div class="card-produto">
                                 <h3>Laranja Ilha</h3>
                                 <p>R$2,50 / KG</p>
                                 <label>KG:</label>
                                 <input type="number" class="produtokg" name="Laranja" min="0.00" step="0.25" value="0.00"> 
                                 <label>Unidade:</label>
-                                <input type="number" class="produtounit" name="Laranja" min="1" value="0">
+                                <input type="number" class="produtounit" id="qtd-unit-laranja" name="Laranja" min="1" value="0">
                             </div>
-                            <button class="black-button" onclick="adicionarCompra('Laranja', 2.50)">Adicionar à lista</button>
+                            <button class="black-button" onclick="adicionarCompra(this, 'Laranja', 2.50, document.getElementById('qtd-unit-laranja').value)">Adicionar à lista</button>
                         </div>
                     </li>
                     <li>
                         <img src="/Site/assets/fruits/morango.png" alt="">
                         <div class="home-list-wrapper">
-                            <div>
+                            <div class="card-produto">
                                 <h3>Morango</h3>
                                 <p>R$8,00 / KG</p>
                                 <label>KG:</label>
                                 <input type="number" class="produtokg" name="Morango" min="0.00" step="0.25" value="0.00">
                                 <label>Unidade:</label>
-                                <input type="number" class="produtounit" name="Morango" min="1" value="0">
+                                <input type="number" class="produtounit" id="qtd-unit-morango" name="Morango" min="1" value="0">
                             </div>
-                            <button class="black-button" onclick="adicionarCompra('Morango', 8.00)">Adicionar à lista</button>
+                            <button class="black-button" onclick="adicionarCompra(this, 'Morango', 8.00, document.getElementById('qtd-unit-morango').value)">Adicionar à lista</button>
                         </div>
                     </li>
                 </ul>
