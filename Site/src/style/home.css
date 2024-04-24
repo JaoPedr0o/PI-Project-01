@@ -17,21 +17,19 @@
     --button-hover: #222222;
 }
 
-body {
-    width: 100vw;
-    height: 100vh;
+html {
     display: flex;
     justify-content: center;
-    align-items: center;
+}
+
+body {
+    width: 144rem;
+    height: 100vh;
+    display: flex;
     flex-direction: column;
     background: var(--white);
     overflow-x: hidden;
     overflow-y: hidden;
-}
-
-.content {
-    width: 144rem;
-    background: var(--white);
 }
 
 
@@ -63,6 +61,7 @@ header h1 {
 /* Formatação do Menu de Navegação Superior */
 #menu-nav {
     height: 10rem;
+    width: 100%;
 }
 
 #menu-nav ul {
@@ -176,7 +175,7 @@ main {
     width: 60rem;
     height: 48.5rem;
     background-color: var(--black);
-    background-image: url(/Site/assets/icons/game-exemple.gif);
+    background-image: url(/Site/assets/icons/game-exemple.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
