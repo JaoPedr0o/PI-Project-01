@@ -17,11 +17,10 @@ function adicionarCompra(productName, productPrice, productCountUnit, productCou
         if (productCountKg !== 0 && productCountUnit > 0) { //Se for em unidade
             produtoExist.quantidade += qtd_unit;
             produtoExist.preco += productPrice*qtd_unit;
-            console.log(productList)
+            atualizaLista(productName, qtd_unit, productCountUnit*productPrice)
         } else if (productCountUnit !== 0 && productCountKg > 0) { //Se for em quilogramas
             produtoExist.quantidade += qtd_kg;
             produtoExist.preco += productPrice*qtd_kg;
-            console.log(productList)
         }  
     } else {
         // Se não, adiciona o produto com a quantidade especificada
