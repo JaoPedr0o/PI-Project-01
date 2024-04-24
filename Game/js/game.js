@@ -1,6 +1,7 @@
 const person = document.querySelector('.person');
 const door = document.querySelector('.door');
 
+//Movimentação 
 const keysPressed = {};
 let position = { top: 0, left: 0 };
 const sprites = {
@@ -29,7 +30,7 @@ function moveCharacter() {
     let movingUp = keysPressed['w'] || keysPressed['W'];
     let movingDown = keysPressed['s'] || keysPressed['S'];
 
-    // Define a sprite baseado no movimento
+    // Define a sprite baseado no movimento, para não travar o gif
     if (isMoving()) {
         if (movingRight) {
             person.classList.add('moving-right');
@@ -41,7 +42,7 @@ function moveCharacter() {
             person.classList.add('moving-down');
         }
     } else {
-        person.className = 'person'; // Remove todas as classes de movimento
+        person.className = 'person'; // Remove todas as classes de movimento, para não travar na colisão
     }
 
     if (movingLeft) {
@@ -56,7 +57,7 @@ function moveCharacter() {
     if (movingDown) {
         position.top -= step;
     }
-
+    //Anuncio da colisão
     updatePosition();
 
     if (detectarColisao() && !anuncioExibido) {
@@ -70,6 +71,7 @@ function moveCharacter() {
     }
 }
 
+
 document.addEventListener('keydown', (event) => {
     keysPressed[event.key] = true;
     moveCharacter();
@@ -82,6 +84,7 @@ document.addEventListener('keyup', (event) => {
         person.className = 'person'; // Remove todas as classes de movimento
     }
 });
+//Parametros da colisão
 
 function detectarColisao() {
     const personRect = person.getBoundingClientRect();
@@ -93,7 +96,7 @@ function detectarColisao() {
         modalCasa1.classList("modalGameActive")
     })
 }
-
+//Reset 
 function resetPosition() {
     position = { top: 0, left: 0 };
     updatePosition();
