@@ -4,6 +4,7 @@ const door = document.querySelector('.door');
 //Movimentação 
 const keysPressed = {};
 let position = { top: 0, left: 0 };
+
 const sprites = {
     idle: 'img-game/player/player-idle-dow.gif',
     right: 'img-game/player/player-walk-right.gif',
@@ -11,7 +12,7 @@ const sprites = {
     up: 'img-game/player/player-walk-up.gif',
     down: 'img-game/player/player-walk-down.gif'
 };
-let anuncioExibido = false;
+
 
 function updatePosition() {
     person.style.bottom = `${position.top}px`;
@@ -23,7 +24,7 @@ function isMoving() {
 }
 
 function moveCharacter() {
-    const step = 4;
+    const step = 16;
 
     let movingLeft = keysPressed['a'] || keysPressed['A'];
     let movingRight = keysPressed['d'] || keysPressed['D'];
@@ -53,20 +54,22 @@ function moveCharacter() {
     }
     if (movingUp) {
         position.top += step;
+        console.log("Top: "+position.top);
     }
     if (movingDown) {
         position.top -= step;
+        console.log("Down: "+position.top);
     }
     //Anuncio da colisão
     updatePosition();
 
-    if (detectarColisao() && !anuncioExibido) {
-        anuncioExibido = true;
+    if (detectarColisao() ) {
+        person.className = 'person';
         if (confirm("Deseja entrar na casa?")) {
             window.open("casa.html", "_blank");
-            resetPosition();
+           
         } else {
-            resetPosition();
+           
         }
     }
 }
@@ -87,19 +90,25 @@ document.addEventListener('keyup', (event) => {
 //Parametros da colisão
 
 function detectarColisao() {
-    const personRect = person.getBoundingClientRect();
+    // Checando se há colisão
     const doorRect = door.getBoundingClientRect();
-    return !(personRect.right < doorRect.left || personRect.left > doorRect.right || personRect.bottom < doorRect.top || personRect.top > doorRect.bottom);
-
+    const personRect = person.getBoundingClientRect(); 
+    if (personRect.left < doorRect.right && personRect.right > doorRect.left && personRect.top < doorRect.bottom && personRect.bottom > doorRect.top ) {
+      console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
+      resetPosition(350,555);
+      return true;
+  } else {
+      console.log (doorRect);
+  }
     let modalCasa1 = document.getElementById("modal-casa1")
     modalCasa1.addEventListener("click", function () {
         modalCasa1.classList("modalGameActive")
     })
 }
 //Reset 
-function resetPosition() {
-    position = { top: 0, left: 0 };
+function resetPosition(topo, esquerda) {
+    position = { top: topo, left: esquerda };
     updatePosition();
-    anuncioExibido = false;
     keysPressed['w'] = keysPressed['W'] = keysPressed['s'] = keysPressed['S'] = keysPressed['a'] = keysPressed['A'] = keysPressed['d'] = keysPressed['D'] = false;
 } 
+
