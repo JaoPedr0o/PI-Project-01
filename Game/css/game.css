@@ -14,24 +14,38 @@
     background-repeat: no-repeat;
 }
 
-.house {
-    position: absolute;
-   
-    bottom: 60px;
-    right: 200px;
 
-}
+
+
 .door {
     position: absolute;
-    bottom: 95px; /* Ajuste conforme necessário */
-    right: 236px; /* Ajuste conforme necessário */
-    width: 20px; /* Ajuste conforme necessário */
-    height: 20px; /* Ajuste conforme necessário */
+    bottom: 195px; 
+    right: 95px; 
+    width: 50px;
+    height: 13px; 
+}
+.hortac {
+    position: absolute;
+    top: 127px; 
+    left: 93px; 
+    width: 27px;
+    height: 7px; 
+}
+.mercadinho{
+    width: 1280px;
+    height: 590px;
+    border: 1px solid #333;
+    margin: 0 auto;
+    position: relative;
+    background-image: url('/Game/img-game/mercadinho.png');
+    background-repeat: no-repeat;
+    background-color: rgb(136, 51, 1);
 }
 
+
 .person {
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     position: absolute;
     bottom: 0;
     left: 0;

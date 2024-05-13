@@ -26,7 +26,6 @@ body {
     width: 144rem;
     height: 100vh;
     display: flex;
-    align-items: center;
     flex-direction: column;
     background: var(--white);
     overflow-x: hidden;
@@ -176,7 +175,7 @@ header h1 {
     width: 60rem;
     height: 48.5rem;
     background-color: var(--black);
-    background-image: url(/Site/assets/icons/game-exemple.gif);
+    background-image: url(/Site/assets/icons/game-exemple.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
