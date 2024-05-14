@@ -1,5 +1,6 @@
 const person = document.querySelector('.person');
 const door = document.querySelector('.door');
+const hortac = document.querySelector('.hortac');
 
 //Movimentação 
 const keysPressed = {};
@@ -62,16 +63,27 @@ function moveCharacter() {
     }
     //Anuncio da colisão
     updatePosition();
-
-    if (detectarColisao() ) {
+    var colisao = detectarColisao();
+    console.log(colisao);
+    if (colisao == 'door' ) {
         person.className = 'person';
-        if (confirm("Deseja entrar na casa?")) {
+        if (confirm("Deseja entrar no mercadinho?")) {
             window.open("casa.html", "_blank");
            
         } else {
-           
+          
+        }    
         }
-    }
+    if (colisao == 'hortac') {
+            person.className = 'person';
+        if (confirm("Deseja entrar na horta?")) {
+            window.open("horta.html", "_blank");
+               
+        } else {
+               
+        }
+        }
+    
 }
 
 
@@ -90,20 +102,36 @@ document.addEventListener('keyup', (event) => {
 //Parametros da colisão
 
 function detectarColisao() {
-    // Checando se há colisão
+    // Checando se há colisão com a porta
     const doorRect = door.getBoundingClientRect();
     const personRect = person.getBoundingClientRect(); 
     if (personRect.left < doorRect.right && personRect.right > doorRect.left && personRect.top < doorRect.bottom && personRect.bottom > doorRect.top ) {
       console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
       resetPosition(350,555);
-      return true;
-  } else {
+      return 'door';
+   } else {
       console.log (doorRect);
   }
-    let modalCasa1 = document.getElementById("modal-casa1")
-    modalCasa1.addEventListener("click", function () {
-        modalCasa1.classList("modalGameActive")
-    })
+
+   //Checando se há colisão com a horta
+    const hortacRect = hortac.getBoundingClientRect();
+    if (personRect.left < hortacRect.right && personRect.right > hortacRect.left && personRect.top < hortacRect.bottom && personRect.bottom > hortacRect.top ) {
+        console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
+        resetPosition(350,555);
+        return 'hortac';
+    } else {
+        console.log (hortacRect);
+    }
+
+
+
+
+
+
+   // let modalCasa1 = document.getElementById("modal-casa1")
+   // modalCasa1.addEventListener("click", function () {
+       // modalCasa1.classList("modalGameActive")
+    //})
 }
 //Reset 
 function resetPosition(topo, esquerda) {
