@@ -1,6 +1,7 @@
 const person = document.querySelector('.person');
 const door = document.querySelector('.door');
 const hortac = document.querySelector('.hortac');
+const açouguec = document.querySelector('.açouguec');
 
 //Movimentação 
 const keysPressed = {};
@@ -83,7 +84,15 @@ function moveCharacter() {
                
         }
         }
-    
+    if (colisao == 'açouguec') {
+            person.className = 'person';
+        if (confirm("Deseja entrar no açougue?")) {
+            window.open("açougue.html", "_blank");
+               
+        } else {
+               
+        }
+        }    
 }
 
 
@@ -123,7 +132,15 @@ function detectarColisao() {
         console.log (hortacRect);
     }
 
-
+    //Checando se há colisão com o açougue
+    const açouguecRect = açouguec.getBoundingClientRect();
+    if (personRect.left < açouguecRect.right && personRect.right > açouguecRect.left && personRect.top < açouguecRect.bottom && personRect.bottom > açouguecRect.top ) {
+        console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
+        resetPosition(350,555);
+        return 'açouguec';
+    } else {
+        console.log (açouguecRect);
+    }
 
 
 

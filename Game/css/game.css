@@ -31,16 +31,24 @@
     width: 27px;
     height: 7px; 
 }
-.mercadinho{
-    width: 1280px;
-    height: 590px;
-    border: 1px solid #333;
-    margin: 0 auto;
-    position: relative;
-    background-image: url('/Game/img-game/mercadinho.png');
-    background-repeat: no-repeat;
-    background-color: rgb(136, 51, 1);
+.açouguec {
+    position: absolute;
+    top: 265px; 
+    left: 665px; 
+    width: 35px;
+    height: 10px; 
 }
+
+
+.açougue{
+    position: absolute;
+    top: 103px; 
+    left: 633px; 
+    width: 255px;
+    height: 257px; 
+
+}
+
 
 
 .person {
