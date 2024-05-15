@@ -1,106 +1,109 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/Site/src/style/home.css">
-    <link rel="stylesheet" href="/Site/src/style/global.css">
-    <title>Frutaria - Home</title>
-</head>
-<body>
-    <header id="header-banner">
-        <h1>FRUTARIA LOGO</h1>
-    </header>
-    <nav id="menu-nav">
-        <ul>
-            <li class="menu-item menu-item-active"><a href="#">INÍCIO</a></li>
-            <li class="menu-item"><a href="#">CATÁLOGO</a></li>
-            <li class="menu-item"><a href="#">SOBRE</a></li>
-            <li class="menu-item"><a href="#">CONTATO</a></li>
-            <li class="menu-item"><a href="#">CADASTRO</a></li>
-            <li class="menu-item" id="open-list"><a href="#"><div id="cart-icon"></div></div></a></li>
-        </ul>
-    </nav>
-    <main>
-        <section id="home-list">
-            <ul>
-                <li>
-                    <img src="/Site/assets/fruits/mamao.png" alt="">
-                    <div class="home-list-wrapper">
-                        <div>
-                            <h3>Mamão</h3>
-                            <p>R$3,50 / KG</p>
-                            <label>KG:</label>
-                            <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00">
-                            <label>Unidade:</label>
-                            <input type="number" class="produtounit" name="Mamão" min="1" value="0">
-                        </div>
-                        <button class="black-button" onclick="adicionarCompra()">Adicionar à lista</button>
-                    </div> 
-                </li>
-                <li>
-                    <img src="/Site/assets/fruits/blueberry.png" alt="">
-                    <div class="home-list-wrapper">
-                        <div>
-                            <h3>Blueberry</h3>
-                            <p>R$4,00 / KG</p>
-                            <label>KG:</label>
-                            <input type="number" class="produtokg" name="Blueberry" min="0.00" step="0.25" value="0.00">
-                            <label>Unidade:</label>
-                            <input type="number" class="produtounit" name="blueberry" min="1" value="0">
-                        </div>
-                        <button class="black-button" onclick="adicionarCompra()">Adicionar à lista</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="/Site/assets/fruits/laranja.png" alt="">
-                    <div class="home-list-wrapper">
-                        <div>
-                            <h3>Laranja Ilha</h3>
-                            <p>R$2,50 / KG</p>
-                            <label>KG:</label>
-                            <input type="number" class="produtokg" name="Laranja" min="0.00" step="0.25" value="0.00"> 
-                            <label>Unidade:</label>
-                            <input type="number" class="produtounit" name="Laranja" min="1" value="0">
-                        </div>
-                        <button class="black-button" onclick="adicionarCompra()">Adicionar à lista</button>
-                    </div>
-                </li>
-                <li>
-                    <img src="/Site/assets/fruits/morango.png" alt="">
-                    <div class="home-list-wrapper">
-                        <div>
-                            <h3>Morango</h3>
-                            <p>R$8,00 / KG</p>
-                            <label>KG:</label>
-                            <input type="number" class="produtokg" name="Morango" min="0.00" step="0.25" value="0.00">
-                            <label>Unidade:</label>
-                            <input type="number" class="produtounit" name="Morango" min="1" value="0">
-                        </div>
-                        <button class="black-button" onclick="adicionarCompra()">Adicionar à lista</button>
-                    </div>
-                </li>
-            </ul>
-            <p><a href="">VER COMPLETO</a></p>
-        </section>
-        <section id="game-view">
-            <a href="/Game/game.html"><h1 style="color: white;">COMPRA INTERATIVA</h1></a>
-        </section>
-    </main>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="/Site/src/style/home.css">
+        <link rel="stylesheet" href="/Site/src/style/global.css">
+        <title>Frutaria - Home</title>
+    </head>
+    <body>
+            <header id="header-banner">
+                <h1>FRUTARIA LOGO</h1>
+            </header>
+            <div id="menu-nav">
+                <ul>
+                    <li class="menu-item menu-item-active"><a href="#">INÍCIO</a></li>
+                    <li class="menu-item"><a href="#">CATÁLOGO</a></li>
+                    <li class="menu-item"><a href="#">SOBRE</a></li>
+                    <li class="menu-item"><a href="#">CONTATO</a></li>
+                    <li class="menu-item"><a href="#">CADASTRO</a></li>
+                    <li class="menu-item" id="open-list"><a href="#"><div id="cart-icon"></div></div></a></li>
+                </ul>
+            </div>
+            <div id="main">
+                <section id="home-list">
+                    <ul>
+                        <li>
+                            <img src="/Site/assets/fruits/mamao.png" alt="">
+                            <div class="home-list-wrapper">
+                                <div class="card-produto">
+                                    <h3>Mamão</h3>
+                                    <p>R$3,50 / KG</p>
+                                    <label>KG:</label>
+                                    <input type="number" class="produtokg" id="qtd-kg-mamao" name="Mamão" min="0.00" step="0.25" value="0.00">
+                                    <label>Unidade:</label>
+                                    <input type="number" class="produtounit" id="qtd-unit-mamao" name="Mamão" min="1" value="0">
+                                </div>
+                                <button class="black-button" onclick="adicionarCompra('Mamão', 3.50, document.getElementById('qtd-unit-mamao').value, document.getElementById('qtd-kg-mamao').value)">Adicionar à lista</button>
+                            </div> 
+                        </li>
+                        <li>
+                            <img src="/Site/assets/fruits/blueberry.png" alt="">
+                            <div class="home-list-wrapper">
+                                <div class="card-produto">
+                                    <h3>Blueberry</h3>
+                                    <p>R$4,00 / KG</p>
+                                    <label>KG:</label>
+                                    <input type="number" class="produtokg" id="qtd-kg-blueberry" name="Blueberry" min="0.00" step="0.25" value="0.00">
+                                    <label>Unidade:</label>
+                                    <input type="number" class="produtounit" id="qtd-unit-blueberry" name="blueberry" min="1" value="0">
+                                </div>
+                                <button class="black-button" onclick="adicionarCompra('Blueberry', 4.00, document.getElementById('qtd-unit-blueberry').value, document.getElementById('qtd-kg-blueberry').value)">Adicionar à lista</button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/Site/assets/fruits/laranja.png" alt="">
+                            <div class="home-list-wrapper">
+                                <div class="card-produto">
+                                    <h3>Laranja Ilha</h3>
+                                    <p>R$2,50 / KG</p>
+                                    <label>KG:</label>
+                                    <input type="number" class="produtokg" id="qtd-kg-laranja"name="Laranja" min="0.00" step="0.25" value="0.00"> 
+                                    <label>Unidade:</label>
+                                    <input type="number" class="produtounit" id="qtd-unit-laranja" name="Laranja" min="1" value="0">
+                                </div>
+                                <button class="black-button" onclick="adicionarCompra('Laranja', 2.50, document.getElementById('qtd-unit-laranja').value, document.getElementById('qtd-kg-laranja').value)">Adicionar à lista</button>
+                            </div>
+                        </li>
+                        <li>
+                            <img src="/Site/assets/fruits/morango.png" alt="">
+                            <div class="home-list-wrapper">
+                                <div class="card-produto">
+                                    <h3>Morango</h3>
+                                    <p>R$8,00 / KG</p>
+                                    <label>KG:</label>
+                                    <input type="number" class="produtokg" id="qtd-kg-morango" name="Morango" min="0.00" step="0.25" value="0.00">
+                                    <label>Unidade:</label>
+                                    <input type="number" class="produtounit" id="qtd-unit-morango" name="Morango" min="1" value="0">
+                                </div>
+                                <button class="black-button" onclick="adicionarCompra('Morango', 8.00, document.getElementById('qtd-unit-morango').value, document.getElementById('qtd-kg-morango').value)">Adicionar à lista</button>
+                            </div>
+                        </li>
+                    </ul>
+                    <p><a href="">VER COMPLETO</a></p>
+                </section>
+                <section id="game-view">
+                    <a href="/Game/game.html"><h1 style="color: white;">COMPRA INTERATIVA</h1></a>
+                </section>
+            </div>
 
-    <div id="modal-list" class="modal-active">
-        <div id="modal-content">
-            <h1>SUA LISTA DE COMPRAS</h1>
-            <button id="close-list">X</button>
-            <ul id="lista">
-                <!-- Lista de compras será inserida aqui dinamicamente -->
-            </ul>
-        </div>   
-    </div>
-    <script src="/Site/scripts/script.js"></script>
-    <script src="/Site/scripts/generator.js"></script>
-</body>
+            <div id="modal-list" class="modal-active">
+                <div id="modal-content">
+                    <h1>SUA LISTA DE COMPRAS</h1>
+                    <button id="close-list">X</button>
+                    <ul id="lista">
+                        <!-- Lista de compras será inserida aqui dinamicamente -->
+                    </ul>
+                </div>   
+            </div>
+
+        
+
+        <script src="/Site/scripts/script.js"></script>
+        <script src="/Site/scripts/generator.js"></script>
+    </body>
 </html>
