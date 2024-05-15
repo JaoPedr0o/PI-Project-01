@@ -1,0 +1,1 @@
+# Colocar as Imagens nesta pasta ("img-Yasmin")
