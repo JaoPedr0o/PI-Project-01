@@ -1,7 +1,7 @@
 /* Formatações Gerais */
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     font-size: 10px;
     font-family: "Poppins", sans-serif;
@@ -10,7 +10,7 @@
 :root {
     --common-gray: #515052;
     --lightgray: #D9D9D9;
-    --white: #FFFFFA;
+    --white: #FFFFFE;
     --red: #FF312E;
     --blue: #2e82ff;
     --black: #000000;
@@ -31,6 +31,8 @@ main {
     gap: 3rem;
 }
 
+
+/* Estilização geral: navbar */
 #navbarSupportedContent .navbar-brand {
     font-size: 3.6rem;
     font-weight: bold;
@@ -56,6 +58,8 @@ nav   {
     color: var(--black);
 }
 
+
+/* Estilização geral: catálogo de produtos */
 #catalog-side {
     display: flex;
     flex-direction: column;
@@ -78,32 +82,96 @@ nav   {
 }
 
 .product-card {
+    display: flex;
     background-color: var(--white);
-    width: 35rem;
-    height: 15rem;
+    width: 44rem;
+    height: 30rem;
     border-radius: 1rem;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
     border: 1px solid #F7F7F7;
 }
 
+.product-card:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+    border: 1px solid #F7F7F7;
+}
 
-@media (min-width: 1920px) {
+.product-card > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+    width: 100%;
+}
+
+.product-card > div img {
+    width: 9rem;
+    height: 9rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+}
+
+.product-card > div img:hover {
+    background-color: var(--lightgray);
+    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    
+}
+
+.product-card > div div {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.2rem;
+    width: 23rem;
+    gap: 1rem;
+}
+
+.product-card > div div p {
+    margin: 0px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: var(--lightgray);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.5rem;
+    align-self: flex-start;
+}
+
+.product-card > div div input {
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid var(--lightgray);
+}
+
+.product-card > div div h3 {
+    font: bold;
+    font-size: 2.5rem;
+}
+
+
+/* Estilização aplicada a dispositivos com tela superior a 1920px.*/
+@media (min-width: 1440px) {
     .content {
-        width: 192rem;
+        width: 144rem;
     }
     
+
+    /* Estilização da apresentação da compra interativa */
     #game-present{
         display: flex;
         justify-content: space-between;
         width: 100%;
-        height: 80rem;
+        height: 65rem;
     }
 
     #game-view {
         width: 47%;
         height: 100%;
-        background-image: url(/Site/assets/rotative-banner/img-game-view.jpeg);
+        background-image: url(/Site/assets/banners/img-game-view.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 1rem;
@@ -114,37 +182,45 @@ nav   {
         height: 100%;
         background-color: var(--lightgray);
     }
+
+
+    /* Estilização da seção de contato. */
+    #contact-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #contact-side > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contact-side > div iframe {
+        width: 47%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #contact-box {
+        width: 47%;
+        height: 65rem;
+        background-color: var(--lightgray);
+    }
+
+
+
+
+
+
+    footer {
+        height: 40rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Formatação da modal da lista de compras */
