@@ -29,6 +29,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+    margin-bottom: 3rem;
 }
 
 
@@ -59,98 +60,7 @@ nav   {
 }
 
 
-/* Estilização geral: catálogo de produtos */
-#catalog-side {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem;
-}
 
-#catalog-slider {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 3rem;
-    width: auto;
-    height: 80rem;
-    overflow-x: auto;
-    white-space:nowrap;
-    border-radius: 1rem;
-    
-}
-
-.product-card {
-    display: flex;
-    background-color: var(--white);
-    width: 44rem;
-    height: 30rem;
-    border-radius: 1rem;
-    /* offset-x | offset-y | blur-radius | spread-radius | color */
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-    border: 1px solid #F7F7F7;
-}
-
-.product-card:hover {
-    background-color: rgba(0, 0, 0, 0.02);
-    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    border: 1px solid #F7F7F7;
-}
-
-.product-card > div {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 1rem;
-    gap: 1rem;
-    width: 100%;
-}
-
-.product-card > div img {
-    width: 9rem;
-    height: 9rem;
-    transition: all 0.3s;
-    border-radius: 50%;
-}
-
-.product-card > div img:hover {
-    background-color: var(--lightgray);
-    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    
-}
-
-.product-card > div div {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.2rem;
-    width: 23rem;
-    gap: 1rem;
-}
-
-.product-card > div div p {
-    margin: 0px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    background-color: var(--lightgray);
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.5rem;
-    align-self: flex-start;
-}
-
-.product-card > div div input {
-    border-radius: 0.5rem;
-    padding: 0.5rem;
-    outline: none;
-    border: 1px solid var(--lightgray);
-}
-
-.product-card > div div h3 {
-    font: bold;
-    font-size: 2.5rem;
-}
 
 
 /* Estilização aplicada a dispositivos com tela superior a 1920px.*/
@@ -184,6 +94,100 @@ nav   {
     }
 
 
+    /* Estilização geral: catálogo de produtos */
+    #catalog-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #catalog-slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        height: 70rem;
+        overflow-x: hidden;
+        /* white-space:nowrap; */
+        border-radius: 1rem;
+        
+    }
+
+    .product-card {
+        display: flex;
+        background-color: var(--white);
+        width: 33rem;
+        height: 20rem;
+        border-radius: 1rem;
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .product-card > div img {
+        width: 9rem;
+        height: 9rem;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+    .product-card > div img:hover {
+        background-color: var(--lightgray);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        
+    }
+
+    .product-card > div div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.2rem;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .product-card > div div p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: var(--lightgray);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        align-self: flex-start;
+    }
+
+    .product-card > div div input {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div h3 {
+        font: bold;
+        font-size: 2rem;
+    }
+
+
     /* Estilização da seção de contato. */
     #contact-side {
         display: flex;
@@ -210,15 +214,214 @@ nav   {
     }
 
 
-
-
-
-
+    /* Estilização do rodapé */
     footer {
-        height: 40rem;
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        background-color: var(--lightgray);
+    }
+
+    footer > div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer > div > div {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+    }
+
+    .social-icon{
+        cursor: pointer;
+    }
+}
+
+
+
+/* Estilização aplicada a dispositivos com tela entre 1024px e 1440px.*/
+@media (min-width: 1024px) and (max-width: 1460px){
+    .content {
+        width: 102.4rem;
+    }
+    
+
+    /* Estilização da apresentação da compra interativa */
+    #game-present{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 50rem;
+    }
+
+    #game-view {
+        width: 47%;
+        height: 100%;
+        background-image: url(/Site/assets/banners/img-game-view.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+    #game-info {
+        width: 47%;
+        height: 100%;
+        background-color: var(--lightgray);
+    }
+
+
+    /* Estilização geral: catálogo de produtos */
+    #catalog-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #catalog-slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        width: 100%;
+        height: 50rem;
+        overflow-x: hidden;
+        /* white-space:nowrap; */
+        border-radius: 1rem;
+        
+    }
+
+    .product-card {
+        display: flex;
+        background-color: var(--white);
+        width: 33rem;
+        height: 20rem;
+        border-radius: 1rem;
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card > div {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 1rem;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .product-card > div img {
+        width: 9rem;
+        height: 9rem;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+    .product-card > div img:hover {
+        background-color: var(--lightgray);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        
+    }
+
+    .product-card > div div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.2rem;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .product-card > div div p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: var(--lightgray);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.5rem;
+        align-self: flex-start;
+    }
+
+    .product-card > div div input {
+        border-radius: 0.5rem;
+        padding: 0.5rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div h3 {
+        font: bold;
+        font-size: 2rem;
+    }
+
+
+    /* Estilização da seção de contato. */
+    #contact-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #contact-side > div {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #contact-side > div iframe {
+        width: 47%;
+        height: auto;
+        border-radius: 1rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    }
+
+    #contact-box {
+        width: 47%;
+        height: 50rem;
+        background-color: var(--lightgray);
+    }
+
+
+    /* Estilização do rodapé */
+    footer {
+        width: 100%;
+        height: 20rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        background-color: var(--lightgray);
+    }
+
+    footer > div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social-icon{
+        cursor: pointer;
     }
 }
 
