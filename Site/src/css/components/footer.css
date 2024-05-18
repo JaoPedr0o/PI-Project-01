@@ -1,0 +1,27 @@
+/* Estilização do rodapé */
+footer {
+    width: 100%;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: var(--lightgray);
+}
+
+footer > div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-icon{
+    cursor: pointer;
+}

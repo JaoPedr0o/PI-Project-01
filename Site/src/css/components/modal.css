@@ -1,0 +1,131 @@
+/* Formatação da modal da lista de compras */
+#modal-list {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000089;
+    border: 2px solid var(--black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal-content {
+    background-color: var(--white);
+    width: 128rem;
+    height: 64rem;
+    border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Título da modal */
+#modal-content h1 {
+    font-size: 2.4rem;
+}
+
+/* Botão de fechamento */
+#modal-content #close-list {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--black);
+    transition: color, background 0.2s;
+}
+#modal-content #close-list:hover {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--white);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--black);
+}
+#modal-content #close-list:active {
+    position: absolute;
+    width: 2.9rem;
+    height: 2.9rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--black);
+    background-color: var(--white);
+    align-self: flex-end;
+    right: 1rem;
+    top: 1rem;
+    border-radius: 0.2rem;
+    border: 2px solid var(--black);
+}
+
+#modal-content ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#modal-content ul li {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+    width: 50%;
+    height: 5rem;
+    border: 2px solid var(--common-gray);
+    list-style: none;
+    border-radius: 0.2rem;
+}
+
+/* Botão de remover item da lista */
+#modal-content ul li .btRemove {
+    color: var(--white);
+    background-color: var(--red);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+    border-radius: 0.2rem;
+    transition: color,background 0.2s;
+}
+#modal-content ul li .btRemove:hover {
+    color: var(--red);
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--red);
+    border-radius: 0.2rem;
+}
+
+/* Botão de adicionar mais item a lista */
+#modal-content ul li .btAdd {
+    color: var(--white);
+    background-color: var(--blue);
+    padding: 0.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.2rem;
+    transition: color,background 0.2s;
+}
+#modal-content ul li .btAdd:hover {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 2px solid var(--blue);
+    border-radius: 0.2rem;
+}
+
+/* Classe que o js usa para abrir e fechar a modal */
+.modal-active {
+    visibility: hidden;
+}

@@ -1,12 +1,4 @@
 /* Formatações Gerais */
-* {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-size: 10px;
-    font-family: "Poppins", sans-serif;
-}
-
 :root {
     --common-gray: #515052;
     --lightgray: #D9D9D9;
@@ -22,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    background-attachment: fixed;
 }
 
 main {
@@ -31,7 +23,6 @@ main {
     gap: 3rem;
     margin-bottom: 3rem;
 }
-
 
 /* Estilização geral: navbar */
 #navbarSupportedContent .navbar-brand {
@@ -43,6 +34,13 @@ nav   {
     height: 10rem;
 }
 
+.navbar-nav{
+    display: flex;
+    gap: 2rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
 .navbar-nav .nav-item .nav-link{
     font-size: 1.6rem;
 }
@@ -52,15 +50,48 @@ nav   {
     color: red;
 }
 
-.navbar-nav{
-    display: flex;
-    gap: 2rem;
-    font-weight: 700;
-    color: var(--black);
+
+/* Estilização geral: carousel de produtos */
+
+.carousel-control-next-icon {
+    background-image: url(/Site/assets/icons/next-icon.png) !important;
+}
+.carousel-control-prev-icon {
+    background-image: url(/Site/assets/icons/prev-icon.png) !important;
 }
 
+#carouselExample {
+    background: linear-gradient(180deg, var(--white), var(--lightgray));
+}
 
+.carousel-inner {
+    padding: 0 1rem;
+}
 
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 2.5% !important;
+    height: 12%;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    opacity: 100 !important;
+    transition: opacity .15s ease;
+    background-color: var(--white) !important;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0.2rem;
+    }
+    .carousel-control-prev:hover {
+        opacity: .70 !important;
+    }
+    .carousel-control-next:hover {
+        opacity: .70 !important;
+    }
 
 
 /* Estilização aplicada a dispositivos com tela superior a 1920px.*/
@@ -69,7 +100,6 @@ nav   {
         width: 144rem;
     }
     
-
     /* Estilização da apresentação da compra interativa */
     #game-present{
         display: flex;
@@ -84,7 +114,7 @@ nav   {
         background-image: url(/Site/assets/banners/img-game-view.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
     }
     #game-info {
@@ -95,24 +125,20 @@ nav   {
 
 
     /* Estilização geral: catálogo de produtos */
-    #catalog-side {
-        display: flex;
-        flex-direction: column;
-        gap: 3rem;
-    }
+    
 
     #catalog-slider {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 3rem;
         width: 100%;
-        height: 70rem;
+        height: 55rem;
         overflow-x: hidden;
         /* white-space:nowrap; */
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         
     }
 
@@ -121,15 +147,15 @@ nav   {
         background-color: var(--white);
         width: 33rem;
         height: 20rem;
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
         border: 1px solid #F7F7F7;
     }
 
     .product-card:hover {
-        background-color: rgba(0, 0, 0, 0.02);
-        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.80);
+        box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
         border: 1px solid #F7F7F7;
     }
 
@@ -153,7 +179,6 @@ nav   {
         background-color: var(--lightgray);
         box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
         padding: 1rem;
-        
     }
 
     .product-card > div div {
@@ -171,12 +196,12 @@ nav   {
         font-weight: bold;
         background-color: var(--lightgray);
         padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
+        border-radius: 0.2rem;
         align-self: flex-start;
     }
 
     .product-card > div div input {
-        border-radius: 0.5rem;
+        border-radius: 0.2rem;
         padding: 0.5rem;
         outline: none;
         border: 1px solid var(--lightgray);
@@ -203,7 +228,7 @@ nav   {
     #contact-side > div iframe {
         width: 47%;
         height: auto;
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
     }
 
@@ -212,37 +237,7 @@ nav   {
         height: 65rem;
         background-color: var(--lightgray);
     }
-
-
-    /* Estilização do rodapé */
-    footer {
-        width: 100%;
-        height: 20rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
-        background-color: var(--lightgray);
-    }
-
-    footer > div {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    footer > div > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .social-icon{
-        cursor: pointer;
-    }
 }
-
 
 
 /* Estilização aplicada a dispositivos com tela entre 1024px e 1440px.*/
@@ -266,7 +261,7 @@ nav   {
         background-image: url(/Site/assets/banners/img-game-view.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
     }
     #game-info {
@@ -294,24 +289,24 @@ nav   {
         height: 50rem;
         overflow-x: hidden;
         /* white-space:nowrap; */
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         
     }
 
     .product-card {
         display: flex;
         background-color: var(--white);
-        width: 33rem;
-        height: 20rem;
-        border-radius: 1rem;
+        width: 22rem;
+        height: 18rem;
+        border-radius: 0.2rem;
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
         border: 1px solid #F7F7F7;
     }
 
     .product-card:hover {
-        background-color: rgba(0, 0, 0, 0.02);
-        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        background-color: rgba(255, 255, 255, 0.80);
+        box-shadow: 0px 4px 10px 4px rgba(0, 0, 0, 0.1);
         border: 1px solid #F7F7F7;
     }
 
@@ -319,14 +314,14 @@ nav   {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        margin: 1rem;
-        gap: 1rem;
+        margin: 0.5rem;
+        gap: 0.5rem;
         width: 100%;
     }
 
     .product-card > div img {
-        width: 9rem;
-        height: 9rem;
+        width: 6rem;
+        height: 6rem;
         transition: all 0.3s;
         border-radius: 50%;
     }
@@ -344,29 +339,42 @@ nav   {
         flex-direction: column;
         margin-bottom: 0.2rem;
         width: auto;
-        gap: 1rem;
+        gap: 0.5rem;
     }
 
     .product-card > div div p {
         margin: 0px;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: bold;
         background-color: var(--lightgray);
         padding: 0.2rem 0.5rem;
-        border-radius: 0.5rem;
+        border-radius: 0.2rem;
         align-self: flex-start;
     }
 
     .product-card > div div input {
         border-radius: 0.5rem;
-        padding: 0.5rem;
+        font-size: 1rem;
+        padding: 0.2rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div button {
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div button:hover{
+        font-size: 1rem;
         outline: none;
         border: 1px solid var(--lightgray);
     }
 
     .product-card > div div h3 {
         font: bold;
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
 
 
@@ -385,7 +393,7 @@ nav   {
     #contact-side > div iframe {
         width: 47%;
         height: auto;
-        border-radius: 1rem;
+        border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
     }
 
@@ -394,168 +402,6 @@ nav   {
         height: 50rem;
         background-color: var(--lightgray);
     }
-
-
-    /* Estilização do rodapé */
-    footer {
-        width: 100%;
-        height: 20rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
-        background-color: var(--lightgray);
-    }
-
-    footer > div {
-        width: 90%;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    footer > div > div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .social-icon{
-        cursor: pointer;
-    }
-}
-
-
-/* Formatação da modal da lista de compras */
-#modal-list {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: #00000089;
-    border: 2px solid var(--black);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#modal-content {
-    background-color: var(--white);
-    width: 128rem;
-    height: 64rem;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
-/* Título da modal */
-#modal-content h1 {
-    font-size: 2.4rem;
-}
-
-/* Botão de fechamento */
-#modal-content #close-list {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--white);
-    background-color: var(--black);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid var(--black);
-    transition: color, background 0.2s;
-}
-#modal-content #close-list:hover {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--black);
-    background-color: var(--white);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid var(--black);
-}
-#modal-content #close-list:active {
-    position: absolute;
-    width: 2.9rem;
-    height: 2.9rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--black);
-    background-color: var(--white);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.5rem;
-    border: 2px solid var(--black);
-}
-
-#modal-content ul {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-#modal-content ul li {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 2rem;
-    width: 50%;
-    height: 5rem;
-    border: 2px solid var(--common-gray);
-    list-style: none;
-    border-radius: 0.5rem;
-}
-
-/* Botão de remover item da lista */
-#modal-content ul li .btRemove {
-    color: var(--white);
-    background-color: var(--red);
-    padding: 0.5rem;
-    border: 2px solid var(--red);
-    border-radius: 0.5rem;
-    transition: color,background 0.2s;
-}
-#modal-content ul li .btRemove:hover {
-    color: var(--red);
-    background-color: var(--white);
-    padding: 0.5rem;
-    border: 2px solid var(--red);
-    border-radius: 0.5rem;
-}
-
-/* Botão de adicionar mais item a lista */
-#modal-content ul li .btAdd {
-    color: var(--white);
-    background-color: var(--blue);
-    padding: 0.5rem;
-    border: 2px solid var(--blue);
-    border-radius: 0.5rem;
-    transition: color,background 0.2s;
-}
-#modal-content ul li .btAdd:hover {
-    color: var(--blue);
-    background-color: var(--white);
-    padding: 0.5rem;
-    border: 2px solid var(--blue);
-    border-radius: 0.5rem;
-}
-
-/* Classe que o js usa para abrir e fechar a modal */
-.modal-active {
-    visibility: hidden;
 }
 
 
