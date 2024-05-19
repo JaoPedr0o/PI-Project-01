@@ -4,26 +4,37 @@
     width: 100vw;
     height: 100vh;
     background-color: #00000089;
-    border: 2px solid var(--black);
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
 }
 
 #modal-content {
     background-color: var(--white);
-    width: 128rem;
-    height: 64rem;
+    width: 50rem;
+    height: 100%;
     border-radius: 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+    
+}
+
+#modal-header {
+    width: 50rem;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /* Título da modal */
 #modal-content h1 {
     font-size: 2.4rem;
+    text-align: center;
+    line-height: 0;
+    margin: 0;
 }
 
 /* Botão de fechamento */
@@ -81,18 +92,20 @@
 
 #modal-content ul li {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     gap: 2rem;
-    width: 50%;
+    padding: 1rem;
+    width: 96%;
     height: 5rem;
     border: 2px solid var(--common-gray);
     list-style: none;
     border-radius: 0.2rem;
+    font-size: 1.5rem;
 }
 
 /* Botão de remover item da lista */
-#modal-content ul li .btRemove {
+#modal-content ul li button {
     color: var(--white);
     background-color: var(--red);
     padding: 0.5rem;
@@ -100,28 +113,11 @@
     border-radius: 0.2rem;
     transition: color,background 0.2s;
 }
-#modal-content ul li .btRemove:hover {
+#modal-content ul li button:hover {
     color: var(--red);
     background-color: var(--white);
     padding: 0.5rem;
     border: 2px solid var(--red);
-    border-radius: 0.2rem;
-}
-
-/* Botão de adicionar mais item a lista */
-#modal-content ul li .btAdd {
-    color: var(--white);
-    background-color: var(--blue);
-    padding: 0.5rem;
-    border: 2px solid var(--blue);
-    border-radius: 0.2rem;
-    transition: color,background 0.2s;
-}
-#modal-content ul li .btAdd:hover {
-    color: var(--blue);
-    background-color: var(--white);
-    padding: 0.5rem;
-    border: 2px solid var(--blue);
     border-radius: 0.2rem;
 }
 

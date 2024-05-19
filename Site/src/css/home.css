@@ -14,7 +14,6 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-attachment: fixed;
 }
 
 main {
@@ -24,74 +23,13 @@ main {
     margin-bottom: 3rem;
 }
 
-/* Estilização geral: navbar */
-#navbarSupportedContent .navbar-brand {
-    font-size: 3.6rem;
-    font-weight: bold;
-}
-
-nav   {
-    height: 10rem;
-}
-
-.navbar-nav{
-    display: flex;
-    gap: 2rem;
-    font-weight: 700;
-    color: var(--black);
-}
-
-.navbar-nav .nav-item .nav-link{
-    font-size: 1.6rem;
-}
-
-.navbar-nav .nav-item .nav-link .active{
-    font-size: 1.6rem;
-    color: red;
-}
 
 
-/* Estilização geral: carousel de produtos */
 
-.carousel-control-next-icon {
-    background-image: url(/Site/assets/icons/next-icon.png) !important;
-}
-.carousel-control-prev-icon {
-    background-image: url(/Site/assets/icons/prev-icon.png) !important;
-}
 
-#carouselExample {
-    background: linear-gradient(180deg, var(--white), var(--lightgray));
-}
 
-.carousel-inner {
-    padding: 0 1rem;
-}
 
-.carousel-control-next, .carousel-control-prev {
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-self: center;
-    width: 2.5% !important;
-    height: 12%;
-    padding: 0;
-    text-align: center;
-    border: 0;
-    opacity: 100 !important;
-    transition: opacity .15s ease;
-    background-color: var(--white) !important;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
-    border-radius: 0.2rem;
-    }
-    .carousel-control-prev:hover {
-        opacity: .70 !important;
-    }
-    .carousel-control-next:hover {
-        opacity: .70 !important;
-    }
+
 
 
 /* Estilização aplicada a dispositivos com tela superior a 1920px.*/
@@ -123,9 +61,46 @@ nav   {
         background-color: var(--lightgray);
     }
 
-
     /* Estilização geral: catálogo de produtos */
-    
+    .carousel-control-next-icon {
+        background-image: url(/Site/assets/icons/next-icon.png) !important;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+    }
+
+    #carouselExample {
+        background: linear-gradient(180deg, var(--white), var(--lightgray));
+    }
+
+    .carousel-inner {
+        padding: 0 1rem;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 2.5% !important;
+        height: 12%;
+        padding: 0;
+        text-align: center;
+        border: 0;
+        opacity: 100 !important;
+        transition: opacity .15s ease;
+        background-color: var(--white) !important;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 0.2rem;
+    }
+    .carousel-control-prev:hover {
+        opacity: .70 !important;
+    }
+    .carousel-control-next:hover {
+        opacity: .70 !important;
+    }
 
     #catalog-slider {
         display: flex;
@@ -207,6 +182,18 @@ nav   {
         border: 1px solid var(--lightgray);
     }
 
+    .product-card > div div button {
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div button:hover{
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
     .product-card > div div h3 {
         font: bold;
         font-size: 2rem;
@@ -238,6 +225,14 @@ nav   {
         background-color: var(--lightgray);
     }
 }
+
+
+
+
+
+
+
+
 
 
 /* Estilização aplicada a dispositivos com tela entre 1024px e 1440px.*/
@@ -272,6 +267,46 @@ nav   {
 
 
     /* Estilização geral: catálogo de produtos */
+    .carousel-control-next-icon {
+        background-image: url(/Site/assets/icons/next-icon.png) !important;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+    }
+
+    #carouselExample {
+        background: linear-gradient(180deg, var(--white), var(--lightgray));
+    }
+
+    .carousel-inner {
+        padding: 0 1rem;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 2.5% !important;
+        height: 12%;
+        padding: 0;
+        text-align: center;
+        border: 0;
+        opacity: 100 !important;
+        transition: opacity .15s ease;
+        background-color: var(--white) !important;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 0.2rem;
+    }
+    .carousel-control-prev:hover {
+        opacity: .70 !important;
+    }
+    .carousel-control-next:hover {
+        opacity: .70 !important;
+    }
+
     #catalog-side {
         display: flex;
         flex-direction: column;
