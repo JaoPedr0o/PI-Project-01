@@ -63,7 +63,7 @@ function moveCharacter() {
         console.log("Down: "+position.top);
     }
     //Anuncio da colisão
-    updatePosition();
+  /* updatePosition();
     var colisao = detectarColisao();
     console.log(colisao);
     if (colisao == 'door' ) {
@@ -92,7 +92,14 @@ function moveCharacter() {
         } else {
                
         }
-        }    
+        }  
+        */
+        updatePosition();
+        var colisao = detectarColisao();
+        console.log(colisao);
+        if (colisao) {
+            showModal(colisao);
+        }  
 }
 
 
@@ -108,6 +115,52 @@ document.addEventListener('keyup', (event) => {
         person.className = 'person'; // Remove todas as classes de movimento
     }
 });
+// Função para mostrar a modal
+function showModal(location) {
+    const modal = document.getElementById("myModal");
+    const modalText = document.getElementById("modal-text");
+    const enterButton = document.getElementById("enter");
+    const cancelButton = document.getElementById("cancel");
+
+    if (location === 'door') {
+        modalText.textContent = "Deseja entrar no mercadinho?";
+        enterButton.onclick = () => window.open("casa.html", "_blank");
+        modal.style.display = "none";
+    } else if (location === 'hortac') {
+        modalText.textContent = "Deseja entrar na horta?";
+        enterButton.onclick = () => window.open("horta.html", "_blank");
+        modal.style.display = "none";
+    } else if (location === 'açouguec') {
+        modalText.textContent = "Deseja entrar no açougue?";
+        enterButton.onclick = () => window.open("açougue.html", "_blank");
+        modal.style.display = "none";
+    }
+
+    modal.style.display = "block";
+
+    // Fechar modal quando clicar em cancelar
+
+    cancelButton.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    // Fechar modal quando clicar no X
+    const span = document.getElementsByClassName("close")[0];
+    span.onclick = () => {
+        modal.style.display = "none";
+    };
+
+    // Fechar modal quando clicar fora dela
+    window.onclick = (event) => {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    };
+}
+
+
+
+
 //Parametros da colisão
 
 function detectarColisao() {
@@ -116,7 +169,7 @@ function detectarColisao() {
     const personRect = person.getBoundingClientRect(); 
     if (personRect.left < doorRect.right && personRect.right > doorRect.left && personRect.top < doorRect.bottom && personRect.bottom > doorRect.top ) {
       console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
-      resetPosition(350,555);
+      resetPosition(100,1130);
       return 'door';
    } else {
       console.log (doorRect);
@@ -126,7 +179,7 @@ function detectarColisao() {
     const hortacRect = hortac.getBoundingClientRect();
     if (personRect.left < hortacRect.right && personRect.right > hortacRect.left && personRect.top < hortacRect.bottom && personRect.bottom > hortacRect.top ) {
         console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
-        resetPosition(350,555);
+        resetPosition(350,90);
         return 'hortac';
     } else {
         console.log (hortacRect);
@@ -136,7 +189,7 @@ function detectarColisao() {
     const açouguecRect = açouguec.getBoundingClientRect();
     if (personRect.left < açouguecRect.right && personRect.right > açouguecRect.left && personRect.top < açouguecRect.bottom && personRect.bottom > açouguecRect.top ) {
         console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
-        resetPosition(350,555);
+        resetPosition(240,665);
         return 'açouguec';
     } else {
         console.log (açouguecRect);
