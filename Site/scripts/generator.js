@@ -3,6 +3,7 @@ const productList = [
 // Adiciona produtos dinamicamente
 ];
 
+
 //Lista de Preços de cada produto
 const productPriceList = [
     {
@@ -48,6 +49,16 @@ const productPriceList = [
 ]
 
 const lista = document.getElementById('lista');
+let emptyList = document.getElementById("empty-list")
+
+function emptyListActive() {
+    if (productList.length === 0) {
+        emptyList.classList.remove("empty-list-hidden")
+    } else {
+        emptyList.classList.add("empty-list-hidden")
+    }
+}
+emptyListActive()
 
 //Função que processa a adição de produtos à lista | Ela traz o conteudo do imput no html
 function adicionarCompra(product) {
@@ -87,6 +98,7 @@ function adicionarCompra(product) {
             cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
             console.log(productList)
         }
+        emptyListActive()
     } else {
         // Se o produto já estiver na lista, aumenta a quantidade
         if (productCount !== 0) {
@@ -101,4 +113,5 @@ function adicionarCompra(product) {
             li.appendChild(btRemove)
         }
     }
+    emptyListActive()
 }

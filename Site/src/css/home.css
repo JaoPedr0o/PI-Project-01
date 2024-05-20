@@ -49,7 +49,7 @@ main {
     #game-view {
         width: 47%;
         height: 100%;
-        background-image: url(/Site/assets/banners/img-game-view.jpeg);
+        background-image: url(/Site/assets/banners/img-presentation.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0.2rem;
@@ -185,13 +185,13 @@ main {
     .product-card > div div button {
         font-size: 1rem;
         outline: none;
-        border: 1px solid var(--lightgray);
+        border: 1px solid var(--black);
     }
 
     .product-card > div div button:hover{
         font-size: 1rem;
         outline: none;
-        border: 1px solid var(--lightgray);
+        border: 1px solid var(--black);
     }
 
     .product-card > div div h3 {
@@ -222,7 +222,9 @@ main {
     #contact-box {
         width: 47%;
         height: 65rem;
-        background-color: var(--lightgray);
+        background-image: url(/Site/assets/banners/img-contact.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 
@@ -253,7 +255,7 @@ main {
     #game-view {
         width: 47%;
         height: 100%;
-        background-image: url(/Site/assets/banners/img-game-view.jpeg);
+        background-image: url(/Site/assets/banners/img-presentation.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
         border-radius: 0.2rem;
@@ -436,6 +438,9 @@ main {
         width: 47%;
         height: 50rem;
         background-color: var(--lightgray);
+        background-image: url(/Site/assets/banners/img-contact.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
 

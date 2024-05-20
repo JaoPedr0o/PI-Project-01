@@ -10,15 +10,15 @@
 }
 
 #modal-content {
+    position: relative;
     background-color: var(--white);
     width: 50rem;
     height: 100%;
-    border-radius: 0.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    
+    gap: 2rem;
 }
 
 #modal-header {
@@ -27,6 +27,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: var(--black);
+    color: var(--white);
 }
 
 /* Título da modal */
@@ -37,57 +39,37 @@
     margin: 0;
 }
 
-/* Botão de fechamento */
-#modal-content #close-list {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--white);
-    background-color: var(--black);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.2rem;
-    border: 2px solid var(--black);
-    transition: color, background 0.2s;
-}
-#modal-content #close-list:hover {
-    position: absolute;
-    width: 3rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--black);
-    background-color: var(--white);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.2rem;
-    border: 2px solid var(--black);
-}
-#modal-content #close-list:active {
-    position: absolute;
-    width: 2.9rem;
-    height: 2.9rem;
-    font-size: 1.5rem;
-    text-align: center;
-    color: var(--black);
-    background-color: var(--white);
-    align-self: flex-end;
-    right: 1rem;
-    top: 1rem;
-    border-radius: 0.2rem;
-    border: 2px solid var(--black);
+#close-list {
+    width: 100%;
+    height: 100%;
 }
 
 #modal-content ul {
-    width: 100%;
+    width: 90%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    background-color: #D9D9D950;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#empty-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+    height: 30rem;
+    top: 50;
+}
+
+.empty-list-hidden {
+    visibility: hidden;
 }
 
 #modal-content ul li {
@@ -98,7 +80,7 @@
     padding: 1rem;
     width: 96%;
     height: 5rem;
-    border: 2px solid var(--common-gray);
+    border: 0.1rem solid var(--common-gray);
     list-style: none;
     border-radius: 0.2rem;
     font-size: 1.5rem;
@@ -109,7 +91,7 @@
     color: var(--white);
     background-color: var(--red);
     padding: 0.5rem;
-    border: 2px solid var(--red);
+    border: 0.1rem solid var(--red);
     border-radius: 0.2rem;
     transition: color,background 0.2s;
 }
@@ -117,7 +99,7 @@
     color: var(--red);
     background-color: var(--white);
     padding: 0.5rem;
-    border: 2px solid var(--red);
+    border: 0.1rem solid var(--red);
     border-radius: 0.2rem;
 }
 
@@ -125,3 +107,4 @@
 .modal-active {
     visibility: hidden;
 }
+
