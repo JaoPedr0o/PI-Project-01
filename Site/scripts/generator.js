@@ -48,6 +48,7 @@ const productPriceList = [
     },
 ]
 
+// Adiciona ou remove a mensagem de lista vazia
 const lista = document.getElementById('lista');
 let emptyList = document.getElementById("empty-list")
 
@@ -60,27 +61,35 @@ function emptyListActive() {
 }
 emptyListActive()
 
+
 //Função que processa a adição de produtos à lista | Ela traz o conteudo do imput no html
 function adicionarCompra(product) {
     //Busca o preço do produto escolhido dentro do array de objetos productListprice.  
     let productData = productPriceList.find(produto => produto.name == product.name);
+
+    //Passa o valor do produto para tipo float
     let productPrice = parseFloat(productData.price*product.value)
-    let productName = (product.name)
+
+    //Atribui à variável productName o nome do produto extraido do input
+    let productName = product.name
+
+    //Passa a quantidade do produto escolhido para tipo inteiro
     let productCount = parseInt(product.value)
     
     //Verifica se o produto existe na lista
     let produtoExist = productList.find(item => item.nome === productName);
     
+    //Verifica se o produto ja está na lista
     if (produtoExist === undefined) {
         if (productCount !== 0) {
-            // Se não, adiciona o produto com a quantidade especificada
+            // Se não estiver, adiciona-o com a quantidade especificada em productCount
             productList.push({
                 nome: productName,
                 preco: productPrice,
                 quantidade: productCount,
             })
             
-            //Aqui ele busca no html a tag com id="lista" e cria dentro um "li" indicando o item adicionado, quantidade e valor.
+            //Busca no html a tag com id="lista" e cria dentro um "li" indicando: o item adicionado, a quantidade e o valor.
             const li = document.createElement("li");
             li.id = `${productName}`;
             const btRemove = document.createElement('button')
@@ -98,7 +107,6 @@ function adicionarCompra(product) {
             cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
             console.log(productList)
         }
-        emptyListActive()
     } else {
         // Se o produto já estiver na lista, aumenta a quantidade
         if (productCount !== 0) {

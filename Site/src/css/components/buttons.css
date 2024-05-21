@@ -21,3 +21,27 @@
     cursor: pointer;
 }
 
+.white-button {
+    background-color: var(--white);
+    text-align: center;
+    color: var(--black);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    transition: all 0.2s;
+    font-weight: bold;
+    border: 0.1rem solid var(--white);
+}
+
+.white-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--white);
+}
+
