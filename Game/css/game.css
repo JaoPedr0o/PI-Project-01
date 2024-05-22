@@ -3,7 +3,6 @@
     box-sizing: border-box;
 }
 
-
 .game-board {
     
     width: 1280px;
@@ -15,10 +14,7 @@
     background-repeat: no-repeat;
 }
 
-
-
-
-.door {
+.mercadinhoc {
     position: absolute;
     bottom: 195px; 
     right: 95px; 
@@ -40,7 +36,6 @@
     height: 10px; 
 }
 
-
 .açougue{
     position: absolute;
     top: 103px; 
@@ -49,8 +44,6 @@
     height: 257px; 
 
 }
-
-/* Estilos para a modal com tema Stardew Valley */
 
 /* Fundo escuro semitransparente */
 .modal {
@@ -139,6 +132,10 @@ button:focus {
 .person.moving-right {
     animation-name: right;
 }
+audio {
+    display: none;
+}
+
 
 @keyframes up {
     from { background-image: url('/Game/img-game/player/player-walk-up.gif'); }

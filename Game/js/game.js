@@ -1,7 +1,37 @@
 const person = document.querySelector('.person');
-const door = document.querySelector('.door');
+const mercadinhoc = document.querySelector('.mercadinhoc');
 const hortac = document.querySelector('.hortac');
 const açouguec = document.querySelector('.açouguec');
+var audios = document.querySelectorAll("audio");
+var isMusicPlaying = true;
+
+//Definindo como TODOS(ALL) os audios vão se comportar
+
+audios.forEach(function(audio) {
+    audio.volume = 0.2; // Volume 20%
+    audio.loop = true; // Repetir
+    audio.play();
+});
+
+//Pausar a música quando a aba não estiver ativa
+
+document.addEventListener("visibilitychange", function() {
+    if(document.hidden) {
+        audios.forEach(function(audio) {
+            if(!audio.paused) {
+                audio.pause();
+                isMusicPlaying = true;
+            }
+        });
+    } else {
+        if(isMusicPlaying) {
+            audios.forEach(function(audio) {
+                audio.play();
+            });
+        }
+    }
+});
+
 
 //Movimentação 
 const keysPressed = {};
@@ -26,7 +56,7 @@ function isMoving() {
 }
 
 function moveCharacter() {
-    const step = 16;
+    const step = 6;
 
     let movingLeft = keysPressed['a'] || keysPressed['A'];
     let movingRight = keysPressed['d'] || keysPressed['D'];
@@ -62,7 +92,7 @@ function moveCharacter() {
         position.top -= step;
         console.log("Down: "+position.top);
     }
-    //Anuncio da colisão
+    //Anuncio da colisão (Antigo)
   /* updatePosition();
     var colisao = detectarColisao();
     console.log(colisao);
@@ -94,15 +124,15 @@ function moveCharacter() {
         }
         }  
         */
-        updatePosition();
-        var colisao = detectarColisao();
-        console.log(colisao);
-        if (colisao) {
-            showModal(colisao);
-        }  
+    updatePosition();
+    var colisao = detectarColisao();
+    console.log(colisao);
+    if (colisao) {
+        showModal(colisao);
+    }  
 }
 
-
+// Eventos de teclado para movimentar o personagem
 document.addEventListener('keydown', (event) => {
     keysPressed[event.key] = true;
     moveCharacter();
@@ -115,6 +145,7 @@ document.addEventListener('keyup', (event) => {
         person.className = 'person'; // Remove todas as classes de movimento
     }
 });
+
 // Função para mostrar a modal
 function showModal(location) {
     const modal = document.getElementById("myModal");
@@ -122,9 +153,9 @@ function showModal(location) {
     const enterButton = document.getElementById("enter");
     const cancelButton = document.getElementById("cancel");
 
-    if (location === 'door') {
+    if (location === 'mercadinhoc') {
         modalText.textContent = "Deseja entrar no mercadinho?";
-        enterButton.onclick = () => window.open("casa.html", "_blank");
+        enterButton.onclick = () => window.open("mercadinho.html", "_blank");
         modal.style.display = "none";
     } else if (location === 'hortac') {
         modalText.textContent = "Deseja entrar na horta?";
@@ -164,15 +195,14 @@ function showModal(location) {
 //Parametros da colisão
 
 function detectarColisao() {
-    // Checando se há colisão com a porta
-    const doorRect = door.getBoundingClientRect();
-    const personRect = person.getBoundingClientRect(); 
-    if (personRect.left < doorRect.right && personRect.right > doorRect.left && personRect.top < doorRect.bottom && personRect.bottom > doorRect.top ) {
-      console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y);
-      resetPosition(100,1130);
-      return 'door';
+    // Checando se há colisão com o mercadinho
+    const mercadinhocRect = mercadinhoc.getBoundingClientRect(); // Pega o tamanho do elemento
+    const personRect = person.getBoundingClientRect(); // Pega o tamanho do elemento
+    if (personRect.left < mercadinhocRect.right && personRect.right > mercadinhocRect.left && personRect.top < mercadinhocRect.bottom && personRect.bottom > mercadinhocRect.top ) {
+      console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y); // Pegas os parametros do quadrado
+      return 'mercadinhoc';
    } else {
-      console.log (doorRect);
+      console.log (mercadinhocRect);
   }
 
    //Checando se há colisão com a horta
@@ -194,14 +224,6 @@ function detectarColisao() {
     } else {
         console.log (açouguecRect);
     }
-
-
-
-
-   // let modalCasa1 = document.getElementById("modal-casa1")
-   // modalCasa1.addEventListener("click", function () {
-       // modalCasa1.classList("modalGameActive")
-    //})
 }
 //Reset 
 function resetPosition(topo, esquerda) {
