@@ -306,7 +306,9 @@ main {
         border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
     }
+    
     #game-info {
+        position: relative;
         width: 47%;
         height: 100%;
         background-image: url(/Site/assets/banners/game-exemple.jpg);
@@ -314,8 +316,44 @@ main {
         background-size: cover;
     }
 
-    #game-info .black-button {
+    #game-info .white-button {
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
         text-decoration: none;
+        bottom: 1rem;
+        left: 1rem;
+        position: absolute;
+    }
+
+    #game-info .white-button div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button:hover div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button a {
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    #game-info .white-button:hover a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    #game-info .white-button p {
+        margin: 0;
     }
 
 
