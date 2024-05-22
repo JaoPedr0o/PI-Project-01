@@ -56,7 +56,7 @@ function isMoving() {
 }
 
 function moveCharacter() {
-    const step = 16;
+    const step = 6;
 
     let movingLeft = keysPressed['a'] || keysPressed['A'];
     let movingRight = keysPressed['d'] || keysPressed['D'];
