@@ -121,5 +121,31 @@ function adicionarCompra(product) {
             li.appendChild(btRemove)
         }
     }
+    document.addEventListener('click', function(clique) {
+        if (clique.target && clique.target.id.startsWith('remove-')) {
+            const productName = clique.target.id.replace('remove-', '');
+            const itemIndex = productList.findIndex(item => item.nome === productName);
+            if (itemIndex !== -1) {
+                // Remove o item da lista de produtos
+                productList.splice(itemIndex, 1);
+    
+                // Remove o elemento <li> correspondente do HTML
+                const liParaRemover = document.getElementById(productName);
+
+                if (liParaRemover) {
+                    liParaRemover.remove();
+                }
+    
+                // Atualiza a mensagem de lista vazia
+                emptyListActive();
+                
+                // Troca a imagem do carrinho de compras de volta para vazio, caso a lista esteja vazia
+                if (productList.length === 0) {
+                    let cartIcon = document.getElementById("cart-icon");
+                    cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras-vazio.png)";
+                }
+            }
+        }
+    });
     emptyListActive()
 }
