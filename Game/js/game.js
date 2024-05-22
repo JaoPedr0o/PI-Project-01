@@ -56,7 +56,7 @@ function isMoving() {
 }
 
 function moveCharacter() {
-    const step = 6;
+    const step = 16;
 
     let movingLeft = keysPressed['a'] || keysPressed['A'];
     let movingRight = keysPressed['d'] || keysPressed['D'];
@@ -200,6 +200,7 @@ function detectarColisao() {
     const personRect = person.getBoundingClientRect(); // Pega o tamanho do elemento
     if (personRect.left < mercadinhocRect.right && personRect.right > mercadinhocRect.left && personRect.top < mercadinhocRect.bottom && personRect.bottom > mercadinhocRect.top ) {
       console.log("Colisão detectada em X: " + personRect.x + " Y: " + personRect.y); // Pegas os parametros do quadrado
+      resetPosition(120,1130);
       return 'mercadinhoc';
    } else {
       console.log (mercadinhocRect);
