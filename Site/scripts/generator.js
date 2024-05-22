@@ -121,5 +121,37 @@ function adicionarCompra(product) {
             li.appendChild(btRemove)
         }
     }
+
+    //Função para remover elemento Li
+    //Listener registra evendo "click"
+    document.addEventListener('click', function(clique) {
+        //Se clique for de um eleemento com Id "remove-"
+        if (clique.target && clique.target.id.startsWith('remove-')) {
+            //Extrai o nome do produto do botão
+            const productName = clique.target.id.replace('remove-', '');
+            //encontra o numero de index da lista
+            const itemIndex = productList.findIndex(item => item.nome === productName);
+            if (itemIndex !== -1) {
+                // Remove o item da lista de produtos
+                productList.splice(itemIndex, 1);
+    
+                // Remove o elemento <li> correspondente do HTML
+                const liParaRemover = document.getElementById(productName);
+
+                if (liParaRemover) {
+                    liParaRemover.remove();
+                }
+    
+                // Atualiza a mensagem de lista vazia
+                emptyListActive();
+                
+                // Troca a imagem do carrinho de compras de volta para vazio, caso a lista esteja vazia
+                if (productList.length === 0) {
+                    let cartIcon = document.getElementById("cart-icon");
+                    cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras-vazio.png)";
+                }
+            }
+        }
+    });
     emptyListActive()
 }
