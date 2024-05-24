@@ -61,8 +61,7 @@ function emptyListActive() {
 }
 emptyListActive()
 
-
-//Função que processa a adição de produtos à lista | Ela traz o conteudo do imput no html
+//FUNÇÃO DE ADIÇÃO DE PRODUTO À LISTA
 function adicionarCompra(product) {
     //Busca o preço do produto escolhido dentro do array de objetos productListprice.  
     let productData = productPriceList.find(produto => produto.name == product.name);
@@ -105,7 +104,7 @@ function adicionarCompra(product) {
             //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
             let cartIcon = document.getElementById("cart-icon")
             cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
-            console.log(productList)
+            totalUpdate()
         }
     } else {
         // Se o produto já estiver na lista, aumenta a quantidade
@@ -119,49 +118,50 @@ function adicionarCompra(product) {
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
             li.appendChild(btRemove)
+            totalUpdate()
         }
     }
 
-    //Função para remover elemento Li
+    //FUNÇÃO PARA REMOVER PRODUTO DA LISTA
     //Listener registra evendo "click"
     document.addEventListener('click', function(clique) {
         //Se clique for de um elemento com Id "remove-"
         if (clique.target && clique.target.id.startsWith('remove-')) {
             //Extrai o nome do produto do botão
+
             const productName = clique.target.id.replace('remove-', '');
+            //encontra o numero de index da lista
 
-            //Confirmação para ver se o usuário realmente quer remover o produto
-            let removePermission = confirm(`Deseja remover ${productName} da lista de compras?`)
-            console.log(removePermission)
-
-            //APENAS se a confirmação for verdadeira 
-            if (removePermission === true) {
-                //encontra o numero de index da lista
-                const itemIndex = productList.findIndex(item => item.nome === productName);
-                if (itemIndex !== -1) {
+            const itemIndex = productList.findIndex(item => item.nome === productName);
+            if (itemIndex !== -1) {
+                //Apenas de o usuario confirmar a exclusão
+                let removePermission = confirm("Deseja realmente remover esse item da lista?")
+                if (removePermission === true) {
                     // Remove o item da lista de produtos
                     productList.splice(itemIndex, 1);
         
                     // Remove o elemento <li> correspondente do HTML
                     const liParaRemover = document.getElementById(productName);
-
                     if (liParaRemover) {
                         liParaRemover.remove();
                     }
-        
-                    // Atualiza a mensagem de lista vazia
-                    emptyListActive();
-                    
-                    // Troca a imagem do carrinho de compras de volta para vazio, caso a lista esteja vazia
-                    if (productList.length === 0) {
-                        let cartIcon = document.getElementById("cart-icon");
-                        cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras-vazio.png)";
-                    }
                 }
+                // Atualiza a mensagem de lista vazia
+                emptyListActive()
+                totalUpdate()
             }
-
-            
         }
     });
+    // Atualiza a mensagem de lista vazia
     emptyListActive()
+}
+
+//Funcão que atualiza o total estimado da compra
+function totalUpdate() {
+    let total = productList.map(item => item.preco);
+    let sum = 0; 
+    for (let i = 0; i < total.length; i++) { sum += total[i]; }
+    console.log(sum)
+    let h4Total = document.querySelector("#total")
+    h4Total.textContent = `TOTAL ESTIMADO: R$${sum}.`
 }

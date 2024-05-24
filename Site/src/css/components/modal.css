@@ -108,3 +108,43 @@
     visibility: hidden;
 }
 
+#calc_section {
+    background-color: #D9D9D950;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-be;
+    height: 11rem !important;
+    width: 90%;
+}
+
+#calc_section #list_info {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    width: 100%;
+    
+}
+
+#calc_section h4 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    height: 50%;
+} 
+
+#calc_section #list_action_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calc_section #list_action_buttons button {
+    width: 15rem;
+    height: 4rem;
+}
