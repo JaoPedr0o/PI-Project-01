@@ -187,6 +187,7 @@ function clearList() {
                 element.remove()
             })
             totalUpdate();
+            emptyListActive()
             } 
         }
     } else {
