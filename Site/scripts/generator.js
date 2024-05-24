@@ -55,8 +55,16 @@ let emptyList = document.getElementById("empty-list")
 function emptyListActive() {
     if (productList.length === 0) {
         emptyList.classList.remove("empty-list-hidden")
+
+        //Troca a imagem do carrinho de compras mostrando está vazio
+        let cartIcon = document.getElementById("cart-icon")
+        cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras.png)"
     } else {
         emptyList.classList.add("empty-list-hidden")
+
+        //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
+        let cartIcon = document.getElementById("cart-icon")
+        cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
     }
 }
 emptyListActive()
@@ -67,7 +75,7 @@ function adicionarCompra(product) {
     let productData = productPriceList.find(produto => produto.name == product.name);
 
     //Passa o valor do produto para tipo float
-    let productPrice = parseFloat(productData.price*product.value)
+    let productPrice = parseFloat((productData.price)*product.value)
 
     //Atribui à variável productName o nome do produto extraido do input
     let productName = product.name
@@ -93,7 +101,7 @@ function adicionarCompra(product) {
             li.id = `${productName}`;
             const btRemove = document.createElement('button')
 
-            li.textContent = `${productName} - ${productCount} Unidade(s) = R$${productPrice}`;
+            li.textContent = `${productName} - ${productCount} Unidade(s) = R$${productPrice.toFixed(2)}`;
 
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
@@ -101,9 +109,6 @@ function adicionarCompra(product) {
             lista.appendChild(li);
             li.appendChild(btRemove)
 
-            //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
-            let cartIcon = document.getElementById("cart-icon")
-            cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
             totalUpdate()
         }
     } else {
@@ -147,8 +152,8 @@ function adicionarCompra(product) {
                     }
                 }
                 // Atualiza a mensagem de lista vazia
-                emptyListActive()
-                totalUpdate()
+                emptyListActive();
+                totalUpdate();
             }
         }
     });
@@ -161,7 +166,7 @@ function totalUpdate() {
     let total = productList.map(item => item.preco);
     let sum = 0; 
     for (let i = 0; i < total.length; i++) { sum += total[i]; }
-    console.log(sum)
+
     let h4Total = document.querySelector("#total")
-    h4Total.textContent = `TOTAL ESTIMADO: R$${sum}.`
+    h4Total.textContent = `TOTAL ESTIMADO: R$${sum.toFixed(2)}`
 }
