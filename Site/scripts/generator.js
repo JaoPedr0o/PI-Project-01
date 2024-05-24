@@ -3,7 +3,6 @@ const productList = [
 // Adiciona produtos dinamicamente
 ];
 
-
 //Lista de Preços de cada produto
 const productPriceList = [
     {
@@ -169,4 +168,28 @@ function totalUpdate() {
 
     let h4Total = document.querySelector("#total")
     h4Total.textContent = `TOTAL ESTIMADO: R$${sum.toFixed(2)}`
+}
+
+//Função de limpar a lista
+function clearList() {
+    if (productList.length !== 0) {
+        //Apenas se o usuário confirmar a exclusão dos produtos
+        let clearConfirm = confirm("Deseja realmente excluir todos os produtos da lista?")
+        if (clearConfirm === true) {
+            //Enquanto o tamanho da lista for maior que 0
+        while (productList.length > 0) {
+            //Remove todos os elementos do array
+            productList.pop()
+
+            // Remove todos os elementos li dentro do #lista
+            let listProducts = document.querySelectorAll("#lista li")
+            listProducts.forEach(element => {
+                element.remove()
+            })
+            totalUpdate();
+            } 
+        }
+    } else {
+        alert("Sua lista está vazia.")
+    }
 }
