@@ -3,7 +3,6 @@ const productList = [
 // Adiciona produtos dinamicamente
 ];
 
-
 //Lista de Preços de cada produto
 const productPriceList = [
     {
@@ -55,20 +54,27 @@ let emptyList = document.getElementById("empty-list")
 function emptyListActive() {
     if (productList.length === 0) {
         emptyList.classList.remove("empty-list-hidden")
+
+        //Troca a imagem do carrinho de compras mostrando está vazio
+        let cartIcon = document.getElementById("cart-icon")
+        cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras.png)"
     } else {
         emptyList.classList.add("empty-list-hidden")
+
+        //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
+        let cartIcon = document.getElementById("cart-icon")
+        cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
     }
 }
 emptyListActive()
 
-
-//Função que processa a adição de produtos à lista | Ela traz o conteudo do imput no html
+//FUNÇÃO DE ADIÇÃO DE PRODUTO À LISTA
 function adicionarCompra(product) {
     //Busca o preço do produto escolhido dentro do array de objetos productListprice.  
     let productData = productPriceList.find(produto => produto.name == product.name);
 
     //Passa o valor do produto para tipo float
-    let productPrice = parseFloat(productData.price*product.value)
+    let productPrice = parseFloat((productData.price)*product.value)
 
     //Atribui à variável productName o nome do produto extraido do input
     let productName = product.name
@@ -94,7 +100,7 @@ function adicionarCompra(product) {
             li.id = `${productName}`;
             const btRemove = document.createElement('button')
 
-            li.textContent = `${productName} - ${productCount} Unidade(s) = R$${productPrice}`;
+            li.textContent = `${productName} - ${productCount} Unidade(s) = R$${productPrice.toFixed(2)}`;
 
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
@@ -102,10 +108,7 @@ function adicionarCompra(product) {
             lista.appendChild(li);
             li.appendChild(btRemove)
 
-            //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
-            let cartIcon = document.getElementById("cart-icon")
-            cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
-            console.log(productList)
+            totalUpdate()
         }
     } else {
         // Se o produto já estiver na lista, aumenta a quantidade
@@ -119,39 +122,75 @@ function adicionarCompra(product) {
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
             li.appendChild(btRemove)
+            totalUpdate()
         }
     }
 
-    //Função para remover elemento Li
+    //FUNÇÃO PARA REMOVER PRODUTO DA LISTA
     //Listener registra evendo "click"
     document.addEventListener('click', function(clique) {
-        //Se clique for de um eleemento com Id "remove-"
+        //Se clique for de um elemento com Id "remove-"
         if (clique.target && clique.target.id.startsWith('remove-')) {
             //Extrai o nome do produto do botão
+
             const productName = clique.target.id.replace('remove-', '');
             //encontra o numero de index da lista
+
             const itemIndex = productList.findIndex(item => item.nome === productName);
             if (itemIndex !== -1) {
-                // Remove o item da lista de produtos
-                productList.splice(itemIndex, 1);
-    
-                // Remove o elemento <li> correspondente do HTML
-                const liParaRemover = document.getElementById(productName);
-
-                if (liParaRemover) {
-                    liParaRemover.remove();
+                //Apenas de o usuario confirmar a exclusão
+                let removePermission = confirm("Deseja realmente remover esse item da lista?")
+                if (removePermission === true) {
+                    // Remove o item da lista de produtos
+                    productList.splice(itemIndex, 1);
+        
+                    // Remove o elemento <li> correspondente do HTML
+                    const liParaRemover = document.getElementById(productName);
+                    if (liParaRemover) {
+                        liParaRemover.remove();
+                    }
                 }
-    
                 // Atualiza a mensagem de lista vazia
                 emptyListActive();
-                
-                // Troca a imagem do carrinho de compras de volta para vazio, caso a lista esteja vazia
-                if (productList.length === 0) {
-                    let cartIcon = document.getElementById("cart-icon");
-                    cartIcon.style.backgroundImage = "url(/Site/assets/icons/carrinho-de-compras-vazio.png)";
-                }
+                totalUpdate();
             }
         }
     });
+    // Atualiza a mensagem de lista vazia
     emptyListActive()
+}
+
+//Funcão que atualiza o total estimado da compra
+function totalUpdate() {
+    let total = productList.map(item => item.preco);
+    let sum = 0; 
+    for (let i = 0; i < total.length; i++) { sum += total[i]; }
+
+    let h4Total = document.querySelector("#total")
+    h4Total.textContent = `TOTAL ESTIMADO: R$${sum.toFixed(2)}`
+}
+
+//Função de limpar a lista
+function clearList() {
+    if (productList.length !== 0) {
+        //Apenas se o usuário confirmar a exclusão dos produtos
+        let clearConfirm = confirm("Deseja realmente excluir todos os produtos da lista?")
+        if (clearConfirm === true) {
+            //Enquanto o tamanho da lista for maior que 0
+        while (productList.length > 0) {
+            //Remove todos os elementos do array
+            productList.pop()
+
+            // Remove todos os elementos li dentro do #lista
+            let listProducts = document.querySelectorAll("#lista li")
+            listProducts.forEach(element => {
+                element.remove()
+            })
+            totalUpdate();
+            emptyListActive()
+            } 
+        }
+    } else {
+        alert("Sua lista está vazia.")
+    }
 }
