@@ -20,7 +20,9 @@ body {
 }
 
 .content {
-    width: 40rem;
+    min-width: 35rem;
+    max-width: 47rem;
+    padding: 0rem 0.5rem;
 }
     
 

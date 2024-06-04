@@ -1,6 +1,6 @@
 /* Estilização do rodapé */
 footer {
-    width: 100%;
+    width: 100vw;
     height: 20rem;
     display: flex;
     flex-direction: column;

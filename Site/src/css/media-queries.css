@@ -10,7 +10,8 @@
     }
 
     .content {
-        width: 75rem;
+        min-width: 75rem;
+        max-width: 80%;
     }
     
     /* Estilização da apresentação da compra interativa */
@@ -57,6 +58,7 @@
         background-image: url(/Site/assets/banners/game-exemple.jpg);
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
     }
 
     #game-info .white-button {
