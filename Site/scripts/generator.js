@@ -194,3 +194,22 @@ function clearList() {
         alert("Sua lista está vazia.")
     }
 }
+
+//Função que atualiza lista de produtos salva no cache do navegador
+window.addEventListener("load", function () {
+    // Recupere a string JSON do localStorage
+    var listSaved = localStorage.getItem('listaDeProdutos');
+
+    // Converta a string JSON de volta para um array de objetos
+    var listLoad = JSON.parse(listSaved);
+
+    // Agora você pode usar o array de objetos normalmente
+    console.log("Lista LocalStorage:")
+    console.log(listLoad);
+
+    //Chama a função de adicionar compra passando cada item carregado do cache para ser visualizado pelo usuario ao abrir a lista.
+    produtcSaved = listLoad.map(function (item) {
+        adicionarCompra(item)
+    })
+    
+})
