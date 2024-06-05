@@ -3,6 +3,14 @@ const productList = [
 // Adiciona produtos dinamicamente
 ];
 
+//Salva a lista na memória do navegador
+function saveList() {
+    // Converta o array de objetos em uma string JSON
+    let listSaved = JSON.stringify(productList);
+
+    // Salva a string JSON no localStorage
+    localStorage.setItem('listaDeProdutos', listSaved);
+}
 
 //Lista de Preços de cada produto
 const productPriceList = [
@@ -77,16 +85,16 @@ function adicionarCompra(product) {
     let productCount = parseInt(product.value)
     
     //Verifica se o produto existe na lista
-    let produtoExist = productList.find(item => item.nome === productName);
+    let produtoExist = productList.find(item => item.name === productName);
     
     //Verifica se o produto ja está na lista
     if (produtoExist === undefined) {
         if (productCount !== 0) {
             // Se não estiver, adiciona-o com a quantidade especificada em productCount
             productList.push({
-                nome: productName,
-                preco: productPrice,
-                quantidade: productCount,
+                name: productName,
+                price: productPrice,
+                value: productCount,
             })
             
             //Busca no html a tag com id="lista" e cria dentro um "li" indicando: o item adicionado, a quantidade e o valor.
@@ -105,6 +113,8 @@ function adicionarCompra(product) {
             //Troca a imagem do carrinho de compras mostrando que algo foi adicionado
             let cartIcon = document.getElementById("cart-icon")
             cartIcon.style.backgroundImage = "url(/Site/assets/icons/lista-de-controle.png)"
+
+            console.log("Lista JavaScript: ")
             console.log(productList)
         }
     } else {
@@ -114,7 +124,7 @@ function adicionarCompra(product) {
 
             const btRemove = document.createElement('button')
 
-            li.textContent = `${productName} - ${produtoExist.quantidade += productCount} Unidade(s) = R$${produtoExist.preco += productPrice}`;
+            li.textContent = `${productName} - ${produtoExist.value += productCount} Unidade(s) = R$${produtoExist.price += productPrice}`;
 
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
@@ -130,7 +140,7 @@ function adicionarCompra(product) {
             //Extrai o nome do produto do botão
             const productName = clique.target.id.replace('remove-', '');
             //encontra o numero de index da lista
-            const itemIndex = productList.findIndex(item => item.nome === productName);
+            const itemIndex = productList.findIndex(item => item.name === productName);
             if (itemIndex !== -1) {
                 // Remove o item da lista de produtos
                 productList.splice(itemIndex, 1);
@@ -141,7 +151,10 @@ function adicionarCompra(product) {
                 if (liParaRemover) {
                     liParaRemover.remove();
                 }
-    
+
+                //Atualiza o localStorage do navegador com a lista ja existente menos o item removido
+                saveList()
+
                 // Atualiza a mensagem de lista vazia
                 emptyListActive();
                 
@@ -154,4 +167,24 @@ function adicionarCompra(product) {
         }
     });
     emptyListActive()
+    saveList()
 }
+
+//Função que atualiza lista de produtos salva no cache do navegador
+window.addEventListener("load", function () {
+    // Recupere a string JSON do localStorage
+    var listSaved = localStorage.getItem('listaDeProdutos');
+
+    // Converta a string JSON de volta para um array de objetos
+    var listLoad = JSON.parse(listSaved);
+
+    // Agora você pode usar o array de objetos normalmente
+    console.log("Lista LocalStorage:")
+    console.log(listLoad);
+
+    //Chama a função de adicionar compra passando cada item carregado do cache para ser visualizado pelo usuario ao abrir a lista.
+    produtcSaved = listLoad.map(function (item) {
+        adicionarCompra(item)
+    })
+    
+})
