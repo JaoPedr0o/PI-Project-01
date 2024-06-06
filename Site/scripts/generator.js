@@ -3,6 +3,15 @@ const productList = [
 // Adiciona produtos dinamicamente
 ];
 
+//Salva a lista na memória do navegador
+function saveList() {
+    // Converta o array de objetos em uma string JSON
+    let listSaved = JSON.stringify(productList);
+
+    // Salva a string JSON no localStorage
+    localStorage.setItem('listaDeProdutos', listSaved);
+}
+
 //Lista de Preços de cada produto
 const productPriceList = [
     {
@@ -83,16 +92,16 @@ function adicionarCompra(product) {
     let productCount = parseInt(product.value)
     
     //Verifica se o produto existe na lista
-    let produtoExist = productList.find(item => item.nome === productName);
+    let produtoExist = productList.find(item => item.name === productName);
     
     //Verifica se o produto ja está na lista
     if (produtoExist === undefined) {
         if (productCount !== 0) {
             // Se não estiver, adiciona-o com a quantidade especificada em productCount
             productList.push({
-                nome: productName,
-                preco: productPrice,
-                quantidade: productCount,
+                name: productName,
+                price: productPrice,
+                value: productCount,
             })
             
             //Busca no html a tag com id="lista" e cria dentro um "li" indicando: o item adicionado, a quantidade e o valor.
@@ -117,7 +126,7 @@ function adicionarCompra(product) {
 
             const btRemove = document.createElement('button')
 
-            li.textContent = `${productName} - ${produtoExist.quantidade += productCount} Unidade(s) = R$${produtoExist.preco += productPrice}`;
+            li.textContent = `${productName} - ${produtoExist.value += productCount} Unidade(s) = R$${produtoExist.price += productPrice}`;
 
             btRemove.textContent = "Remover"
             btRemove.id = `remove-${productName}`
@@ -125,6 +134,7 @@ function adicionarCompra(product) {
             totalUpdate()
         }
     }
+    saveList()
 
     //FUNÇÃO PARA REMOVER PRODUTO DA LISTA
     //Listener registra evendo "click"
@@ -136,7 +146,7 @@ function adicionarCompra(product) {
             const productName = clique.target.id.replace('remove-', '');
             //encontra o numero de index da lista
 
-            const itemIndex = productList.findIndex(item => item.nome === productName);
+            const itemIndex = productList.findIndex(item => item.name === productName);
             if (itemIndex !== -1) {
                 //Apenas de o usuario confirmar a exclusão
                 let removePermission = confirm("Deseja realmente remover esse item da lista?")
@@ -153,16 +163,18 @@ function adicionarCompra(product) {
                 // Atualiza a mensagem de lista vazia
                 emptyListActive();
                 totalUpdate();
+                saveList()
             }
         }
     });
     // Atualiza a mensagem de lista vazia
     emptyListActive()
+    saveList()
 }
 
 //Funcão que atualiza o total estimado da compra
 function totalUpdate() {
-    let total = productList.map(item => item.preco);
+    let total = productList.map(item => item.price);
     let sum = 0; 
     for (let i = 0; i < total.length; i++) { sum += total[i]; }
 
@@ -188,6 +200,7 @@ function clearList() {
             })
             totalUpdate();
             emptyListActive()
+            saveList()
             } 
         }
     } else {
