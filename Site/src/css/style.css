@@ -24,7 +24,56 @@ body {
     max-width: 47rem;
     padding: 0rem 0.5rem;
 }
-    
+
+/* Estilização geral: navbar */
+nav   {
+    height: auto;
+}
+
+.navbar-nav{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.navbar>.container-fluid>.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar>.container-fluid>button {
+    outline: none;
+    border: none;
+}
+
+.navbar-nav .nav-item {
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-size: 1.6rem;
+}
+
+.navbar-nav .nav-item .nav-link .active{
+    font-size: 1.6rem;
+    color: red;
+}
+
+#cart-icon {
+    background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.navbar-default .navbar-toggle .navbar-toggler-icon {
+    font-weight: bold;
+}
 
 main {
     display: flex;
@@ -163,6 +212,8 @@ iframe {
 #catalog-slider {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
     padding: 1rem;
     gap: 1rem;
     overflow-x: hidden;
@@ -175,7 +226,7 @@ iframe {
     display: flex;
     justify-content: center;
     background-color: var(--white);
-    width: 9rem;
+    width: 48%;
     height: 25rem;
     border-radius: 0.2rem; 
     /* offset-x | offset-y | blur-radius | spread-radius | color */

@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-@media (min-width: 767px) {
+@media (min-width: 767px)  and (max-width: 990px) {
     body {
         overflow-x: hidden;
         display: flex;
@@ -12,6 +12,56 @@
     .content {
         min-width: 75rem;
         max-width: 80%;
+    }
+
+    /* Estilização geral: navbar */
+    nav   {
+        height: auto;
+    }
+
+    .navbar-nav{
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .navbar>.container-fluid>.navbar-brand {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .navbar>.container-fluid>button {
+        outline: none;
+        border: none;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0.5rem 2rem;
+        border-radius: 0.2rem;
+    }
+
+    .navbar-nav .nav-item .nav-link{
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav .nav-item .nav-link .active{
+        font-size: 1.6rem;
+        color: red;
+    }
+
+    #cart-icon {
+        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .navbar-default .navbar-toggle .navbar-toggler-icon {
+        font-weight: bold;
     }
     
     /* Estilização da apresentação da compra interativa */
@@ -145,7 +195,8 @@
 
     #catalog-slider {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
         padding: 1rem;
         gap: 0.5rem;
         overflow-x: hidden;
@@ -158,8 +209,751 @@
         display: flex;
         justify-content: center;
         background-color: var(--white);
-        width: 20rem;
+        width: 17rem;
         height: 28rem;
+        border-radius: 0.2rem; 
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card>div {
+        text-align: center;
+    }
+
+    .product-card>div button {
+        margin: 0.5rem;
+    }
+
+    .product-card > div img {
+        width: 9rem;
+        height: 9rem;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+    .product-card > div img:hover {
+        background-color: var(--lightgray);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .product-card > div div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.2rem;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .product-card > div div p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: var(--lightgray);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.2rem;
+        align-self: flex-start;
+    }
+
+    .product-card > div div input {
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div button {
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--black);
+    }
+
+    .product-card > div div button:hover{
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--black);
+    }
+
+    .product-card > div div h3 {
+        font: bold;
+        font-size: 1.5rem;
+    }
+
+
+    /* Estilização da seção de contato. */
+    #contact-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #contact-side > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    #contact-side > div iframe {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        width: 30rem;
+        height: 50%;
+        border-radius: 0.2rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid #533314 !important;
+    }
+
+    #contact-box {
+        width: 100%;
+        height: 50rem;
+        background-image: url(/Site/assets/banners/img-contact.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 991px) and (max-width: 1440px) {
+    body {
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        min-width: 95rem;
+        max-width: 80%;
+    }
+    
+    /* Estilização geral: navbar */
+    nav   {
+        height: auto;
+    }
+
+    .navbar-nav{
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .navbar>.container-fluid>.navbar-brand {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .navbar>.container-fluid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar>.container-fluid .navbar-collapse {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .navbar>.container-fluid>button {
+        outline: none;
+        border: none;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .navbar-nav .nav-item .nav-link{
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav .nav-item .nav-link .active{
+        font-size: 1.6rem;
+        color: red;
+    }
+
+    #cart-icon {
+        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .navbar-default .navbar-toggle .navbar-toggler-icon {
+        font-weight: bold;
+    }
+
+    /* Estilização da apresentação da compra interativa */
+    #game-present{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 45rem;
+    }
+
+    #game-view {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/Site/assets/banners/img-presentation.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 0.2rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        background-position: bottom;
+    }
+    
+    #game-view div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        bottom: 1rem;
+        right: 1rem;
+        width: 20rem;
+        height: 40%;
+        background-color: #000000b4;
+        color: var(--white);
+        border-radius: 0.2rem;
+        padding: 1rem;
+        font-weight: 500;
+    } 
+
+    #game-info {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/Site/assets/banners/game-exemple.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #game-info .white-button {
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        bottom: 1rem;
+        left: 1rem;
+        position: absolute;
+    }
+
+    #game-info .white-button div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button:hover div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button a {
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    #game-info .white-button:hover a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    #game-info .white-button p {
+        margin: 0;
+    }
+
+    
+    /* Estilização geral: catálogo de produtos */
+    .carousel-control-next-icon {
+        background-image: url(/Site/assets/icons/next-icon.png) !important;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+    }
+
+    #carouselExample {
+        background: linear-gradient(180deg, var(--white), var(--lightgray));
+    }
+
+    .carousel-inner {
+        padding: 0 1rem;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 5% !important;
+        height: 12%;
+        padding: 0;
+        text-align: center;
+        border: 0;
+        opacity: 100 !important;
+        transition: opacity .15s ease;
+        background-color: var(--white) !important;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 0.2rem;
+    }
+    .carousel-control-prev:hover {
+        opacity: .70 !important;
+    }
+    .carousel-control-next:hover {
+        opacity: .70 !important;
+    }
+
+    #catalog-slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 0.5rem;
+        overflow-x: hidden;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: var(--white);
+        width: 23%;
+        height: 30rem;
+        border-radius: 0.2rem; 
+        /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+        border: 1px solid #F7F7F7;
+    }
+
+    .product-card>div {
+        text-align: center;
+    }
+
+    .product-card>div button {
+        margin: 0.5rem;
+    }
+
+    .product-card > div img {
+        width: 9rem;
+        height: 9rem;
+        transition: all 0.3s;
+        border-radius: 50%;
+    }
+
+    .product-card > div img:hover {
+        background-color: var(--lightgray);
+        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+    }
+
+    .product-card > div div {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.2rem;
+        width: auto;
+        gap: 1rem;
+    }
+
+    .product-card > div div p {
+        margin: 0px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: var(--lightgray);
+        padding: 0.2rem 0.5rem;
+        border-radius: 0.2rem;
+        align-self: flex-start;
+    }
+
+    .product-card > div div input {
+        border-radius: 0.2rem;
+        padding: 0.5rem;
+        outline: none;
+        border: 1px solid var(--lightgray);
+    }
+
+    .product-card > div div button {
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--black);
+    }
+
+    .product-card > div div button:hover{
+        font-size: 1rem;
+        outline: none;
+        border: 1px solid var(--black);
+    }
+
+    .product-card > div div h3 {
+        font: bold;
+        font-size: 2rem;
+    }
+
+
+    /* Estilização da seção de contato. */
+    #contact-side {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    #contact-side > div {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    #contact-side > div iframe {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        width: 30rem;
+        height: 50%;
+        border-radius: 0.2rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border: 2px solid #533314 !important;
+    }
+
+    #contact-box {
+        width: 100%;
+        height: 50rem;
+        background-image: url(/Site/assets/banners/img-contact.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1440px) {
+    body {
+        overflow-x: hidden;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content {
+        min-width: 140rem;
+    }
+    
+    /* Estilização geral: navbar */
+    nav   {
+        height: auto;
+    }
+
+    .navbar-nav{
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+        font-weight: 700;
+        color: var(--black);
+    }
+
+    .navbar>.container-fluid>.navbar-brand {
+        font-size: 2.5rem;
+        font-weight: bold;
+    }
+
+    .navbar>.container-fluid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar>.container-fluid .navbar-collapse {
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+
+    .navbar>.container-fluid>button {
+        outline: none;
+        border: none;
+    }
+
+    .navbar-nav .nav-item {
+        padding: 0.5rem 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .navbar-nav .nav-item .nav-link{
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav .nav-item .nav-link .active{
+        font-size: 1.6rem;
+        color: red;
+    }
+
+    #cart-icon {
+        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .navbar-default .navbar-toggle .navbar-toggler-icon {
+        font-weight: bold;
+    }
+
+    /* Estilização da apresentação da compra interativa */
+    #game-present{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        height: 60rem;
+    }
+
+    #game-view {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/Site/assets/banners/img-presentation.jpeg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center !important;
+        border-radius: 0.2rem;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        background-position: bottom;
+    }
+    
+    #game-view div {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        bottom: 1rem;
+        right: 1rem;
+        width: 20rem;
+        height: 40%;
+        background-color: #000000b4;
+        color: var(--white);
+        border-radius: 0.2rem;
+        padding: 1rem;
+        font-weight: 500;
+    } 
+
+    #game-info {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-image: url(/Site/assets/banners/game-exemple.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    #game-info .white-button {
+        transition: all 0.2s;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        bottom: 1rem;
+        left: 1rem;
+        position: absolute;
+    }
+
+    #game-info .white-button div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button:hover div {
+        width: 3rem;
+        height: 3rem;
+        background-image: url(/Site/assets/icons/game-control-white.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #game-info .white-button a {
+        color: var(--black);
+        text-decoration: none;
+    }
+
+    #game-info .white-button:hover a {
+        color: var(--white);
+        text-decoration: none;
+    }
+
+    #game-info .white-button p {
+        margin: 0;
+    }
+
+    
+    /* Estilização geral: catálogo de produtos */
+    .carousel-control-next-icon {
+        background-image: url(/Site/assets/icons/next-icon.png) !important;
+    }
+    .carousel-control-prev-icon {
+        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+    }
+
+    #carouselExample {
+        background: linear-gradient(180deg, var(--white), var(--lightgray));
+    }
+
+    .carousel-inner {
+        padding: 0 1rem;
+    }
+
+    .carousel-control-next, .carousel-control-prev {
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: 5% !important;
+        height: 12%;
+        padding: 0;
+        text-align: center;
+        border: 0;
+        opacity: 100 !important;
+        transition: opacity .15s ease;
+        background-color: var(--white) !important;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 0.2rem;
+    }
+    .carousel-control-prev:hover {
+        opacity: .70 !important;
+    }
+    .carousel-control-next:hover {
+        opacity: .70 !important;
+    }
+
+    #catalog-slider {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        padding: 1rem;
+        gap: 0.5rem;
+        overflow-x: hidden;
+        border-radius: 0.2rem;
+        width: 100%;
+        height: auto;
+    }
+
+    .product-card {
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+        background-color: var(--white);
+        width: 23%;
+        height: 30rem;
         border-radius: 0.2rem; 
         /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
