@@ -9,11 +9,28 @@
 :root {
     --common-gray: #515052;
     --lightgray: #D9D9D9;
-    --white: #FFFFFA;
+    --white: #FFFFFE;
     --red: #FF312E;
     --blue: #2e82ff;
+    --green: #2eff4a;
     --black: #000000;
     --button-hover: #222222;
+}
+
+#cart-icon {
+    background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+a#open-list {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 60;
 }
 
 @media (min-width: 767px)  and (max-width: 990px) {
@@ -444,6 +461,304 @@
     .modal-active {
         visibility: hidden;
     }
+
+    /* Formatação da modal da lista de compras */
+    #modal-list {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000089;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #modal-content {
+        position: relative;
+        background-color: var(--white);
+        width: 50rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
+
+    #modal-header {
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Título da modal */
+    #modal-content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 0;
+        margin: 0;
+    }
+
+    #close-list {
+        width: 100%;
+        height: 100%;
+        z-index: 4 !important;
+    }
+
+    #modal-content ul {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #D9D9D950;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    #empty-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 90%;
+        height: 30rem;
+        top: 50;
+    }
+
+    .empty-list-hidden {
+        visibility: hidden;
+    }
+
+    #modal-content ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 96%;
+        height: 5rem;
+        border: 0.1rem solid var(--common-gray);
+        list-style: none;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    /* Botão de remover item da lista */
+    #modal-content ul li button {
+        color: var(--white);
+        background-color: var(--red);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+        transition: color,background 0.2s;
+    }
+    #modal-content ul li button:hover {
+        color: var(--red);
+        background-color: var(--white);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+    }
+
+    /* Classe que o js usa para abrir e fechar a modal */
+    .modal-active {
+        visibility: hidden;
+    }
+
+
+
+    /* Estilização do rodapé */
+    footer {
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        background-color: var(--white);
+    }
+
+    footer > div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social-icon{
+        cursor: pointer;
+    }
+
+
+    /* Formatação da modal da lista de compras */
+    #modal-list {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000089;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #modal-content {
+        position: relative;
+        background-color: var(--white);
+        width: 50rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
+
+    #modal-header {
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Título da modal */
+    #modal-content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 0;
+        margin: 0;
+    }
+
+    #close-list {
+        width: 100%;
+        height: 100%;
+        z-index: 4 !important;
+    }
+
+    #modal-content ul {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #D9D9D950;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    #empty-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 90%;
+        height: 30rem;
+        top: 50;
+    }
+
+    .empty-list-hidden {
+        visibility: hidden;
+    }
+
+    #modal-content ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 96%;
+        height: 5rem;
+        border: 0.1rem solid var(--common-gray);
+        list-style: none;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    /* Botão de remover item da lista */
+    #modal-content ul li button {
+        color: var(--white);
+        background-color: var(--red);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+        transition: color,background 0.2s;
+    }
+    #modal-content ul li button:hover {
+        color: var(--red);
+        background-color: var(--white);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+    }
+
+    /* Classe que o js usa para abrir e fechar a modal */
+    .modal-active {
+        visibility: hidden;
+    }
+
+    #calc_section {
+        background-color: #D9D9D950;
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-be;
+        height: 11rem !important;
+        width: 90%;
+    }
+    
+    #calc_section #list_info {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--black);
+        width: 100%;
+        
+    }
+    
+    #calc_section h4 {
+        font-size: 2rem;
+        width: 100%;
+        color: var(--white);
+        background-color: var(--black);
+        height: 50%;
+    } 
+    
+    #calc_section #list_action_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #calc_section #list_action_buttons button {
+        width: 15rem;
+        height: 4rem;
+    }
+    
+    
 }
 
 
@@ -905,6 +1220,304 @@
     .modal-active {
         visibility: hidden;
     }
+
+    /* Formatação da modal da lista de compras */
+    #modal-list {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000089;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #modal-content {
+        position: relative;
+        background-color: var(--white);
+        width: 50rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
+
+    #modal-header {
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Título da modal */
+    #modal-content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 0;
+        margin: 0;
+    }
+
+    #close-list {
+        width: 100%;
+        height: 100%;
+        z-index: 4 !important;
+    }
+
+    #modal-content ul {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #D9D9D950;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    #empty-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 90%;
+        height: 30rem;
+        top: 50;
+    }
+
+    .empty-list-hidden {
+        visibility: hidden;
+    }
+
+    #modal-content ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 96%;
+        height: 5rem;
+        border: 0.1rem solid var(--common-gray);
+        list-style: none;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    /* Botão de remover item da lista */
+    #modal-content ul li button {
+        color: var(--white);
+        background-color: var(--red);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+        transition: color,background 0.2s;
+    }
+    #modal-content ul li button:hover {
+        color: var(--red);
+        background-color: var(--white);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+    }
+
+    /* Classe que o js usa para abrir e fechar a modal */
+    .modal-active {
+        visibility: hidden;
+    }
+
+
+
+    /* Estilização do rodapé */
+    footer {
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+        background-color: var(--white);
+    }
+
+    footer > div {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    footer > div > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .social-icon{
+        cursor: pointer;
+    }
+
+
+    /* Formatação da modal da lista de compras */
+    #modal-list {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000089;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #modal-content {
+        position: relative;
+        background-color: var(--white);
+        width: 50rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
+
+    #modal-header {
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Título da modal */
+    #modal-content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 0;
+        margin: 0;
+    }
+
+    #close-list {
+        width: 100%;
+        height: 100%;
+        z-index: 4 !important;
+    }
+
+    #modal-content ul {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #D9D9D950;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    #empty-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 90%;
+        height: 30rem;
+        top: 50;
+    }
+
+    .empty-list-hidden {
+        visibility: hidden;
+    }
+
+    #modal-content ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 96%;
+        height: 5rem;
+        border: 0.1rem solid var(--common-gray);
+        list-style: none;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    /* Botão de remover item da lista */
+    #modal-content ul li button {
+        color: var(--white);
+        background-color: var(--red);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+        transition: color,background 0.2s;
+    }
+    #modal-content ul li button:hover {
+        color: var(--red);
+        background-color: var(--white);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+    }
+
+    /* Classe que o js usa para abrir e fechar a modal */
+    .modal-active {
+        visibility: hidden;
+    }
+
+    #calc_section {
+        background-color: #D9D9D950;
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-be;
+        height: 11rem !important;
+        width: 90%;
+    }
+    
+    #calc_section #list_info {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--black);
+        width: 100%;
+        
+    }
+    
+    #calc_section h4 {
+        font-size: 2rem;
+        width: 100%;
+        color: var(--white);
+        background-color: var(--black);
+        height: 50%;
+    } 
+    
+    #calc_section #list_action_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #calc_section #list_action_buttons button {
+        width: 15rem;
+        height: 4rem;
+    }
+    
+    
 }
 
 
@@ -1444,6 +2057,161 @@
         cursor: pointer;
     }
 
+
+    /* Formatação da modal da lista de compras */
+    #modal-list {
+        position: absolute;
+        top: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #00000089;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    #modal-content {
+        position: relative;
+        background-color: var(--white);
+        width: 50rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        gap: 2rem;
+    }
+
+    #modal-header {
+        width: 50rem;
+        height: 5rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: var(--black);
+        color: var(--white);
+    }
+
+    /* Título da modal */
+    #modal-content h1 {
+        font-size: 2.4rem;
+        text-align: center;
+        line-height: 0;
+        margin: 0;
+    }
+
+    #close-list {
+        width: 100%;
+        height: 100%;
+        z-index: 4 !important;
+    }
+
+    #modal-content ul {
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: #D9D9D950;
+        padding: 1rem;
+        overflow-y: auto;
+    }
+
+    #empty-list {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        width: 90%;
+        height: 30rem;
+        top: 50;
+    }
+
+    .empty-list-hidden {
+        visibility: hidden;
+    }
+
+    #modal-content ul li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+        width: 96%;
+        height: 5rem;
+        border: 0.1rem solid var(--common-gray);
+        list-style: none;
+        border-radius: 0.2rem;
+        font-size: 1.5rem;
+    }
+
+    /* Botão de remover item da lista */
+    #modal-content ul li button {
+        color: var(--white);
+        background-color: var(--red);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+        transition: color,background 0.2s;
+    }
+    #modal-content ul li button:hover {
+        color: var(--red);
+        background-color: var(--white);
+        padding: 0.5rem;
+        border: 0.1rem solid var(--red);
+        border-radius: 0.2rem;
+    }
+
+    /* Classe que o js usa para abrir e fechar a modal */
+    .modal-active {
+        visibility: hidden;
+    }
+
+    #calc_section {
+        background-color: #D9D9D950;
+        color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-be;
+        height: 11rem !important;
+        width: 90%;
+    }
+    
+    #calc_section #list_info {
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--black);
+        width: 100%;
+        
+    }
+    
+    #calc_section h4 {
+        font-size: 2rem;
+        width: 100%;
+        color: var(--white);
+        background-color: var(--black);
+        height: 50%;
+    } 
+    
+    #calc_section #list_action_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    #calc_section #list_action_buttons button {
+        width: 15rem;
+        height: 4rem;
+    }
+    
+    
 }
 
 

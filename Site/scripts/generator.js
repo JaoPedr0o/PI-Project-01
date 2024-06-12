@@ -54,6 +54,10 @@ const productPriceList = [
     "name": "Abacate",
     "price": 3.90,
     },
+    {
+    "name": "Abobora",
+    "price": 3.90,
+    },
 ]
 
 // Adiciona ou remove a mensagem de lista vazia
@@ -226,3 +230,4 @@ window.addEventListener("load", function () {
     })
     
 })
+
