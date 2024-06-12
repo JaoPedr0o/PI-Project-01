@@ -12,12 +12,11 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/home.css">
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/components/buttons.css">
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/components/reset.css">
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/components/modal.css">
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/components/navbar.css">
-        <link rel="stylesheet" type="text/css" href="/Site/src/css/components/footer.css">
+        <link rel="stylesheet" type="text/css" href="./Site/src/css/style.css">
+        <link rel="stylesheet" type="text/css" href="./Site/src/css/media-queries.css">
+        <link rel="stylesheet" type="text/css" href="./Site/src/css/components/buttons.css">
+        <link rel="stylesheet" type="text/css" href="./Site/src/css/components/reset.css">
+        <link rel="stylesheet" type="text/css" href="./Site/src/css/components/footer.css">
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Sabores da Terra - Home</title>
@@ -27,12 +26,13 @@
                 <header id="header-banner">
                     <nav class="navbar navbar-expand-lg">
                         <div class="container-fluid">
-                          
+                          <a class="navbar-brand me-auto" href="#">Sabores da Terra</a>
                           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                           </button>
+                          
                           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <a class="navbar-brand me-auto" href="#">Sabores da Terra</a>
+                            
                             <ul class="navbar-nav mb-2 mb-lg-0">
                               <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="#">Início</a>
@@ -42,9 +42,6 @@
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link" href="#">Contato</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link" href="#">Sobre Nós</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link disabled" aria-disabled="true">Cadastrar</a>
@@ -61,7 +58,13 @@
                 
                 <main>
                     <section id="game-present" class="container-fluid">
-                        <div id="game-view"></div>
+                        <div id="game-view">
+                            <div>
+                                <h2 style="font-weight: bold;">Feira Online</h2>
+                                <p>Peça frutas, verduras, legumes, entregas as terças e sextas-feiras.</p>
+                                <button class="white-button">Bora Fazer Feira</button>
+                            </div>  
+                        </div>
                         <div id="game-info">
                             <a class="white-button" href="/Game/game.html">
                                 <div></div>
@@ -74,11 +77,11 @@
                     <div id="carouselExample" class="carousel slide">
                         <h1>Catálogo Completo</h1>
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            <div class="text-center carousel-item active">
                                 <div id="catalog-slider">
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/coconut.png" alt="">
+                                            <img src="./Site/assets/fruits/coconut.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Coco</h3>
@@ -94,7 +97,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/avocado 1.png" alt="">
+                                            <img src="./Site/assets/fruits/avocado 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Abacate</h3>
@@ -110,7 +113,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/banana 1.png" alt="">
+                                            <img src="./Site/assets/fruits/banana 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Banana Prata</h3>
@@ -126,7 +129,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/mango (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/mango (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Manga Espada</h3>
@@ -142,7 +145,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/pitahaya 1.png" alt="">
+                                            <img src="./Site/assets/fruits/pitahaya 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Pitahaya</h3>
@@ -158,7 +161,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/lemon (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/lemon (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Limão Siciliano</h3>
@@ -174,7 +177,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/strawberry (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/strawberry (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Morango</h3>
@@ -190,7 +193,7 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/pear (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/pear (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Pera</h3>
@@ -206,19 +209,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item">
+                            <div class="carousel-item ">
                                 <div id="catalog-slider">
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/coconut.png" alt="">
+                                            <img src="./Site/assets/fruits/coconut.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
-                                                    <h3>Coco2</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <h3>Coco</h3>
+                                                    <p>R$6,00 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-coco" class="produtounit" name="Coco" min="1" value="0">
                                                 </div>
                                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                                             </div>
@@ -226,250 +229,119 @@
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/avocado 1.png" alt="">
+                                            <img src="./Site/assets/fruits/avocado 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Abacate</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$3,90 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-abacate" class="produtounit" name="Abacate" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-abacate'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/banana 1.png" alt="">
+                                            <img src="./Site/assets/fruits/banana 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Banana Prata</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$4,50 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-banana" class="produtounit" name="Banana Prata" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-banana'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/mango (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/mango (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Manga Espada</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$4,80 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-mangaespada" class="produtounit" name="Manga Espada" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-mangaespada'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/pitahaya 1.png" alt="">
+                                            <img src="./Site/assets/fruits/pitahaya 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Pitahaya</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$5,00 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-pitahaya" class="produtounit" name="Pitahaya" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-pitahaya'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/lemon (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/lemon (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Limão Siciliano</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$1,50 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-limaosiciliano" class="produtounit" name="Limão Siciliano" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-limaosiciliano'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/strawberry (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/strawberry (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Morango</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$8,00 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-morango'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="product-card">
                                         <div>
-                                            <img src="/Site/assets/fruits/pear (1) 1.png" alt="">
+                                            <img src="./Site/assets/fruits/pear (1) 1.png" alt="">
                                             <div class="home-list-wrapper">
                                                 <div>
                                                     <h3>Pera</h3>
-                                                    <p>R$3,50 / KG</p>
+                                                    <p>R$1,75 / KG</p>
                                                     <!-- <label>KG:</label>
                                                     <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
                                                     <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
+                                                    <input type="number" id="fruta-pera" class="produtounit" name="Pera" min="1" value="0">
                                                 </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
+                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-pera'))">Adicionar à lista</button>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="carousel-item " >
-                                <div id="catalog-slider">
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/coconut.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Coco3</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/avocado 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Abacate</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/banana 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Banana Prata</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/mango (1) 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Manga Espada</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/pitahaya 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Pitahaya</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/lemon (1) 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Limão Siciliano</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/strawberry (1) 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Morango</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="product-card">
-                                        <div>
-                                            <img src="/Site/assets/fruits/pear (1) 1.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Pera</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
@@ -485,20 +357,21 @@
                     <section id="contact-side">
                         <h1>Entre em Contato</h1>
                         <div>
-                            <div id="contact-box"></div>
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6175865848404!2d-46.40218792394395!3d-18.77061098237204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae6faacc00adbf%3A0xd64f5c7a5e396f71!2sAv.%20Manoel%20Soares%2C%20351%20-%20Lagoa%20Formosa%2C%20MG%2C%2038720-000!5e0!3m2!1spt-BR!2sbr!4v1716400688758!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <div id="contact-box">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6175865848404!2d-46.40218792394395!3d-18.77061098237204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae6faacc00adbf%3A0xd64f5c7a5e396f71!2sAv.%20Manoel%20Soares%2C%20351%20-%20Lagoa%20Formosa%2C%20MG%2C%2038720-000!5e0!3m2!1spt-BR!2sbr!4v1716400688758!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </section>
                 </main>
-            
-                <footer>
+            </div>
+            <footer>
                     <div>
                         <div>
                             <h4>Sabores da Terra</h4>
                             <div class="d-flex gap-3">
-                                <a href=""><img src="/Site/assets/icons/facebook-Icon.png" width="24px" height="24px" alt="Facebook icone"></a>
-                                <a href=""><img src="/Site/assets/icons/instagram-Icon.png" width="24px" height="24px" alt="Instagram icone"></a>
-                                <a href=""><img src="/Site/assets/icons/linkedin-Icon.png" width="24px" height="24px" alt="Linkedin icone"></a>
+                                <a href=""><img src="./Site/assets/icons/facebook-Icon.png" width="24px" height="24px" alt="Facebook icone"></a>
+                                <a href=""><img src="./Site/assets/icons/instagram-Icon.png" width="24px" height="24px" alt="Instagram icone"></a>
+                                <a href=""><img src="./Site/assets/icons/linkedin-Icon.png" width="24px" height="24px" alt="Linkedin icone"></a>
                             </div>
                         </div>
                         <div class="col-1">
@@ -515,7 +388,6 @@
                         <p>Sistemáticos 1P:A - UNIPAM | &copy;Copyright - Todos os Direitos Reservados</p>
                     </div>
                 </footer>
-            </div>
 
             <div id="modal-list" class="modal-active">
                 <div id="close-list"></div>
@@ -527,18 +399,30 @@
                         <div id="empty-list" class="empty-list-hidden">
                             <h4>Sua lista está vazia</h4> 
                             <h4>Adicione os produtos!</h4> 
-                            <img style='border-radius: 50%; border:1px solid black;' src='/Site/assets/banners/list-img.jpeg' width=40%' heigth='40%'>
+                            <img style='border-radius: 50%; border:1px solid black;' src='./Site/assets/banners/list-img.jpeg' width=40%' heigth='40%'>
                         </div>
                             
                         
                         
                         <!-- Lista de compras será inserida aqui dinamicamente -->
+                        
                     </ul>
+                    <div id="calc_section">
+                        <div id="list_info">
+                            <h4 id="total">TOTAL ESTIMADO: R$0</h4>
+                            <img src="/Site/assets/icons/info-icon-white.svg" width="30px" height="30px" alt="Informação sobre as ações da lista">
+                        </div>
+                        <div id="list_action_buttons">
+                            <button class="green-button">WhatsApp</button>
+                            <button class="blue-button">E-mail</button>
+                            <button class="red-button" onclick="clearList()">Limpar</button>
+                        </div>
+                    </div>
                 </div>   
             </div>
         
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        <script src="/Site/scripts/script.js"></script>
-        <script src="/Site/scripts/generator.js"></script>
+        <script src="./Site/scripts/script.js"></script>
+        <script src="./Site/scripts/generator.js"></script>
     </body>
 </html>
