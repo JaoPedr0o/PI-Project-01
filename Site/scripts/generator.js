@@ -14,10 +14,7 @@ function saveList() {
 
 //Lista de Preços de cada produto
 const productPriceList = [
-    {
-    "name": "Mamão",
-    "price": 3.5,
-    },
+
     {
     "name": "Banana Prata",
     "price": 4.5,
@@ -58,6 +55,119 @@ const productPriceList = [
     "name": "Abobora",
     "price": 3.90,
     },
+    {
+        "name": "Alface",
+        "price": 5.00,
+    },
+    {
+        "name": "Banana",
+        "price": 8.95,
+    },
+    {
+        "name": "Beterraba",
+        "price": 4.95,
+    },
+    {
+        "name": "Cenoura",
+        "price": 4.95,
+    },
+    {
+        "name": "Laranja",
+        "price": 5.95,
+    },
+    {
+        "name": "Maça",
+        "price": 8.95,
+    },  
+    {
+        "name": "Mamão",
+        "price": 6.95,
+    }, 
+    {
+        "name": "Melancia",
+        "price": 3.95,
+    },
+    {
+        "name": "Muda Alface",
+        "price": 0.50,
+    },
+    {
+        "name": "Muda Beterraba",
+        "price": 0.70,
+    },
+    {
+        "name": "Muda Cenoura",
+        "price": 0.70,
+    }, 
+    {
+        "name": "Muda Couve",
+        "price": 0.70,
+    },
+    {
+        "name": "Muda Jilo",
+        "price": 0.70,
+    },
+    {
+        "name": "Muda Pimenta",
+        "price": 3.00,
+    },
+    {
+        "name": "Muda Pimentão",
+        "price": 2.50,
+    },
+    {
+        "name": "Muda Quiabo",
+        "price": 0.70,
+    },
+    {
+        "name": "Muda Repolho",
+        "price": 0.70,
+    },
+    {
+        "name": "Azeitona",
+        "price": 10.00,
+    },
+    {
+        "name": "Cerveja",
+        "price": 5.00,
+    },
+    {
+        "name": "Energético",
+        "price": 10.00,
+    },
+    {
+        "name": "Farinha",
+        "price": 8.00,
+    },
+    {
+        "name": "Feijão",
+        "price": 6.00,
+    },
+    {
+        "name": "Ketchup",
+        "price": 5.00,
+    },
+    {
+        "name": "Maionese",
+        "price": 8.00,
+    },
+    {
+        "name": "Oleo",
+        "price": 7.00,
+    },
+    {
+        "name": "Ovos",
+        "price": 10.00,
+    },
+    {
+        "name": "Coxa",
+        "price": 42.00,
+    },
+    {
+        "name": "Peixe",
+        "price": 50.00,
+    },
+    
 ]
 
 // Adiciona ou remove a mensagem de lista vazia
