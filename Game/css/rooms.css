@@ -784,11 +784,16 @@ a#open-list {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        height: 100vh;
+        position: relative;
     }
 
     .content {
+        position: absolute;
+        top: 20rem;
         min-width: 95rem;
         max-width: 80%;
+        height: 100%;
     }
     
     /* Estilização geral: navbar */
@@ -957,7 +962,7 @@ a#open-list {
         padding: 0 1rem;
         background-image: url(img-compras/mercadinho/shelfMercadoNADA.png);
         background-position: center;
-        
+        height: 100%;
     }
 
     .carousel-control-next, .carousel-control-prev {
@@ -1594,10 +1599,13 @@ a#open-list {
         align-items: center;
         flex-direction: column;
         justify-content: center;
+        height: 100vh;
+        background-color: #ffffff;
     }
 
     .content {
         min-width: 140rem;
+
     }
     
     /* Estilização geral: navbar */
