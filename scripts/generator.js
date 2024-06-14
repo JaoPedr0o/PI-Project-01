@@ -1,3 +1,5 @@
+
+
 //Lista de produtos
 const productList = [  
 // Adiciona produtos dinamicamente
@@ -288,12 +290,12 @@ function adicionarCompra(product) {
 }
 
 //Funcão que atualiza o total estimado da compra
+let h4Total = document.querySelector("#total")
 function totalUpdate() {
     let total = productList.map(item => item.price);
     let sum = 0; 
     for (let i = 0; i < total.length; i++) { sum += total[i]; }
 
-    let h4Total = document.querySelector("#total")
     h4Total.textContent = `TOTAL ESTIMADO: R$${sum.toFixed(2)}`
 }
 
@@ -342,3 +344,26 @@ window.addEventListener("load", function () {
     
 })
 
+//Funçaõ que gera PDF
+const btnGenerate = document.querySelector("#pdf-generator");
+
+btnGenerate.addEventListener("click", () =>  {
+    if (productList.length !== 0) {
+        //conteudo do pdf
+        const pdfContent = `<h1>Sabores da Terra</h1> <br> <h2 style="color="red">Sua lista de compras</h2> <br> <h4>${lista.innerHTML}</h4> <br> <h1>${h4Total.innerText}</h1>`
+
+        //configuração
+        const options = {
+            margin: [50, 50, 50, 50],
+            fontSize: 30,
+            filename: "ListaDeCompras.pdf",
+            html2canvas: {scale: 2},
+            jsPDF: {unit: "px", format: "a4", orientation: "portrait"}
+        }
+
+        //Gerar e baixar pdf
+        html2pdf().set(options).from(pdfContent).save()
+    } else {
+        alert("Sua lista está vazia.")
+    }
+})

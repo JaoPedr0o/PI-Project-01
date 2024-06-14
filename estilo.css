@@ -276,13 +276,7 @@ iframe {
     width: 7rem;
     height: 7rem;
     transition: all 0.3s;
-    border-radius: 50%;
-}
-
-.product-card > div img:hover {
-    background-color: var(--lightgray);
-    box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    /* border-radius: 50%; */
 }
 
 .product-card > div div {
@@ -764,13 +758,6 @@ footer > div > div {
         width: 9rem;
         height: 9rem;
         transition: all 0.3s;
-        border-radius: 50%;
-    }
-
-    .product-card > div img:hover {
-        background-color: var(--lightgray);
-        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
     }
 
     .product-card > div div {
@@ -1222,13 +1209,6 @@ footer > div > div {
         width: 9rem;
         height: 9rem;
         transition: all 0.3s;
-        border-radius: 50%;
-    }
-
-    .product-card > div img:hover {
-        background-color: var(--lightgray);
-        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
     }
 
     .product-card > div div {
@@ -1735,13 +1715,6 @@ footer > div > div {
         width: 9rem;
         height: 9rem;
         transition: all 0.3s;
-        border-radius: 50%;
-    }
-
-    .product-card > div img:hover {
-        background-color: var(--lightgray);
-        box-shadow: 0px 4px 10px 2px rgba(0, 0, 0, 0.1);
-        padding: 1rem;
     }
 
     .product-card > div div {
