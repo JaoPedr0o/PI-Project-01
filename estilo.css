@@ -259,6 +259,12 @@ iframe {
     width: 100%;
 }
 
+.product-card>div button:hover {
+    margin: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
 .product-card div div input {
     margin: 0.5rem;
     font-size: 1rem;
@@ -324,14 +330,14 @@ iframe {
     background-color: #00000089;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 #modal-content {
     position: relative;
     background-color: var(--white);
-    width: 50rem;
-    height: 100%;
+    width: 95%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -358,8 +364,8 @@ iframe {
 }
 
 #close-list {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     z-index: 4;
 }
 
@@ -402,7 +408,7 @@ iframe {
     border: 0.1rem solid var(--common-gray);
     list-style: none;
     border-radius: 0.2rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 /* Botão de remover item da lista */
