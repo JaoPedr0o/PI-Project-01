@@ -272,6 +272,7 @@ iframe {
 }
 
 .product-card > div img {
+    margin-top: 1rem;
     width: 7rem;
     height: 7rem;
     transition: all 0.3s;
@@ -743,7 +744,7 @@ footer > div > div {
         display: flex;
         justify-content: center;
         background-color: var(--white);
-        width: 17rem;
+        width: 16rem;
         height: 28rem;
         border-radius: 0.2rem; 
         /* offset-x | offset-y | blur-radius | spread-radius | color */
@@ -1590,14 +1591,19 @@ footer > div > div {
         justify-content: space-around;
         bottom: 1rem;
         right: 1rem;
-        width: 20rem;
+        width: 30rem;
         height: 40%;
         background-color: #000000b4;
         color: var(--white);
         border-radius: 0.2rem;
         padding: 1rem;
         font-weight: 500;
+        
     } 
+
+    #game-view div p {
+        font-size: 1.5rem;
+    }
 
     #game-info {
         position: relative;
@@ -1801,7 +1807,7 @@ footer > div > div {
         position: absolute;
         bottom: 1rem;
         right: 1rem;
-        width: 30rem;
+        width: 45rem;
         height: 50%;
         border-radius: 0.2rem;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
@@ -1810,7 +1816,7 @@ footer > div > div {
 
     #contact-box {
         width: 100%;
-        height: 50rem;
+        height: 70rem;
         background-image: url(banners/img-contact.jpeg);
         background-repeat: no-repeat;
         background-size: cover;
