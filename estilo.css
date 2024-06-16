@@ -202,7 +202,7 @@ main {
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
     display: flex;
-    z-index: 0;
+    z-index: -10;
     align-items: center;
     justify-content: center;
     align-self: flex-end;
@@ -366,6 +366,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    z-index: 4;
 }
 
 #modal-content {
