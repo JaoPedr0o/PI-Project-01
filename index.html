@@ -6,7 +6,7 @@
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nova+Mono&family=VT323&display=swap" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,16 +34,16 @@
                                 <a class="nav-link active" aria-current="page" href="#">Início</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Catálogo</a>
+                                <a class="nav-link" href="#catalog-scroll">Catálogo</a>
                               </li>
                               <li class="nav-item">
-                                <a class="nav-link" href="#">Contato</a>
+                                <a class="nav-link" href="#fruta-laranja">Contato</a>
                               </li>
                               <li class="nav-item">
                                 <a class="nav-link disabled" aria-disabled="true">Cadastrar</a>
                               </li>
                               <li class="nav-item">
-                                <a id="open-list" class="nav-link"href="#"><div id="cart-icon" ></div></a>
+                                <a id="" class="nav-link open-list"href="#"><div id="cart-icon" ></div></a>
                               </li>
                             </ul>
                             
@@ -58,12 +58,12 @@
                             <div>
                                 <h2 style="font-weight: bold;">Feira Online</h2>
                                 <p>Peça frutas, verduras, legumes, entregas as terças e sextas-feiras.</p>
-                                <button class="white-button">Bora Fazer Feira</button>
+                                <a style="text-decoration: none;" class="white-button" href="#catalog-scroll">Bora Fazer Feira</a>
                             </div>  
                         </div>
                         <div id="game-info">
                             <a class="white-button" href="game.html">
-                                <div></div>
+                                <div id="catalog-scroll"></div>
                                 <p>Compra Interativa</p>
                             </a>
                             
@@ -553,52 +553,13 @@
                                         </div>
                                     </div>
                                     <div class="product-card">
-                                        <div>
-                                            <img src="fruits/pitahaya.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Pitahaya</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-ovos" class="produtounit" name="Ovos" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-ovo'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="product-card">
-                                        <div>
-                                            <img src="fruits/lemon.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Limão Siciliano</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
+                                    
                                     </div>
                                     <div class="product-card">
-                                        <div>
-                                            <img src="fruits/strawberry.png" alt="">
-                                            <div class="home-list-wrapper">
-                                                <div>
-                                                    <h3>Morango</h3>
-                                                    <p>R$3,50 / KG</p>
-                                                    <!-- <label>KG:</label>
-                                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                                    <label>Unidade:</label>
-                                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                                </div>
-                                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                 </div>
                             </div>     
@@ -619,8 +580,9 @@
                         <h1>Entre em Contato</h1>
                         <div>
                             <div id="contact-box">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6175865848404!2d-46.40218792394395!3d-18.77061098237204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae6faacc00adbf%3A0xd64f5c7a5e396f71!2sAv.%20Manoel%20Soares%2C%20351%20-%20Lagoa%20Formosa%2C%20MG%2C%2038720-000!5e0!3m2!1spt-BR!2sbr!4v1716400688758!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3777.6175865848404!2d-46.40218792394395!3d-18.77061098237204!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ae6faacc00adbf%3A0xd64f5c7a5e396f71!2sAv.%20Manoel%20Soares%2C%20351%20-%20Lagoa%20Formosa%2C%20MG%2C%2038720-000!5e0!3m2!1spt-BR!2sbr!4v1716400688758!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
                         </div>
                     </section>
                 </main>
@@ -639,9 +601,9 @@
                             <h5>Seções</h5>
                             <ul class="nav flex-column">
                                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Início</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Catálogo</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contato</a></li>
-                                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre Nós</a></li>
+                                <li class="nav-item mb-2"><a href="#catalog-scroll" class="nav-link p-0 text-muted">Catálogo</a></li>
+                                <li class="nav-item mb-2"><a href="#fruta-laranja" class="nav-link p-0 text-muted">Contato</a></li>
+                                <!-- <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Sobre Nós</a></li> -->
                             </ul>
                         </div>
                     </div>
@@ -652,6 +614,9 @@
 
             <div id="modal-list" class="modal-active">
                 <div id="close-list"></div>
+                <div id="modal-info" class="modal-active">
+                    <p>"Prezado cliente, gostaríamos de informar que os preços mostrados em nosso site são estimativas baseadas no peso médio dos produtos selecionados. Por sermos uma frutaria que vende itens frescos e variáveis em peso, o valor total apresentado no carrinho pode diferir do valor final após a pesagem exata dos produtos. Estamos comprometidos em garantir a melhor precisão possível em nossas transações, e qualquer variação no preço será devidamente ajustada no momento da coleta ou entrega dos produtos. Para mais informações ou esclarecimentos, estamos à disposição. Agradecemos pela compreensão."</p>
+                </div>
                 <div id="modal-content">
                     <div id="modal-header">
                         <h1>SUA LISTA DE COMPRAS</h1>
@@ -671,7 +636,7 @@
                     <div id="calc_section">
                         <div id="list_info">
                             <h4 id="total">TOTAL ESTIMADO: R$0</h4>
-                            <img src="icons/info-icon-white.svg" width="30px" height="30px" alt="Informação sobre as ações da lista">
+                            <img src="icons/info-icon-white.svg" id="modal-info-btn" width="30px" height="30px" alt="Informação sobre as ações da lista">
                         </div>
                         <div id="list_action_buttons">
                             <button class="green-button">WhatsApp</button>
