@@ -82,9 +82,29 @@ const productPriceList = [
         "price": 8.95,
     },  
     {
-        "name": "Mamão",
-        "price": 6.95,
+        "name": "Ameixa",
+        "price": 10.50,
     }, 
+    {
+        "name": "Batata",
+        "price": 10.90,
+    },
+    {
+        "name": "Kiwi",
+        "price": 15.90,
+    },
+    {
+        "name": "Limão",
+        "price": 5.90,
+    },
+    {
+        "name": "Maracujá",
+        "price": 15.90,
+    },
+    {
+        "name": "Pêssego",
+        "price": 12.90,
+    },
     {
         "name": "Melancia",
         "price": 3.95,
@@ -169,6 +189,23 @@ const productPriceList = [
         "name": "Peixe",
         "price": 50.00,
     },
+    {
+        "name": "Asa Frango",
+        "price": 45.00,
+    },
+    {
+        "name": "Costelinha",
+        "price": 55.00,
+    },
+    {
+        "name": "Frango",
+        "price": 50.00,
+    },
+    {
+        "name": "Peito Frango",
+        "price": 50.00,
+    },
+
     
 ]
 

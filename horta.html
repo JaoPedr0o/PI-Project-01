@@ -19,11 +19,12 @@
     
 </head>
 <body>
-    <audio controls autoplay>
+    <audio controls autoplay style="display: none;">
         <source src="audios/musicaHorta.mpeg" type="audio/mpeg">
       </audio>
-      <a id="open-list" href="#"><div id="cart-icon" ></div></a>
-      </ul>
+        
+    <a id="open-list" href="#"><div id="cart-icon" ></div></a>
+        
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -36,8 +37,7 @@
                                 <div>
                                     <h3>Abobora</h3>
                                     <p>R$3,90 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-abobora" class="produtounit" name="Abobora" min="1" value="0">
                                 </div>
@@ -52,8 +52,7 @@
                                 <div>
                                     <h3>Alface</h3>
                                     <p>R$5,00 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-alface" class="produtounit" name="Alface" min="1" value="0">
                                 </div>
@@ -68,8 +67,7 @@
                                 <div>
                                     <h3>Banana</h3>
                                     <p>R$8,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                   
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-banana" class="produtounit" name="Banana" min="1" value="0">
                                 </div>
@@ -84,8 +82,7 @@
                                 <div>
                                     <h3>Beterraba</h3>
                                     <p>R$4,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                   
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-beterraba" class="produtounit" name="Beterraba" min="1" value="0">
                                 </div>
@@ -100,8 +97,7 @@
                                 <div>
                                     <h3>Cenoura</h3>
                                     <p>R$4,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-cenoura" class="produtounit" name="Cenoura" min="1" value="0">
                                 </div>
@@ -116,8 +112,7 @@
                                 <div>
                                     <h3>Laranja</h3>
                                     <p>R$5,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-laranja" class="produtounit" name="Laranja" min="1" value="0">
                                 </div>
@@ -132,8 +127,7 @@
                                 <div>
                                     <h3>Maça</h3>
                                     <p>R$8,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-maca" class="produtounit" name="Maça" min="1" value="0">
                                 </div>
@@ -148,8 +142,7 @@
                                 <div>
                                     <h3>Mamão</h3>
                                     <p>R$6,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mamao" class="produtounit" name="Mamão" min="1" value="0">
                                 </div>
@@ -168,8 +161,7 @@
                                 <div>
                                     <h3>Melancia</h3>
                                     <p>R$3,95 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-melancia" class="produtounit" name="Melancia" min="1" value="0">
                                 </div>
@@ -177,6 +169,97 @@
                             </div>
                         </div>
                     </div>
+                
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/ameixa.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Ameixa</h3>
+                                <p>R$10,50 / KG</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-ameixa" class="produtounit" name="Ameixa" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-ameixa'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/batata.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Batata</h3>
+                                <p>R$10,90 / KG</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-batata" class="produtounit" name="Batata" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-batata'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/kiwi.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Kiwi</h3>
+                                <p>R$15,90 / KG</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-kiwi" class="produtounit" name="Kiwi" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-kiwi'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/limao.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Limão</h3>
+                                <p>R$5,90 / KG</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-limao" class="produtounit" name="Limão" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-limao'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/maracuja.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Maracujá</h3>
+                                <p>R$15,90 / KG</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-maracuja" class="produtounit" name="Maracujá" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-maracuja'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div>
+                        <img src="css/img-compras/horta/pessego.png" alt="">
+                        <div class="home-list-wrapper">
+                            <div>
+                                <h3>Pêssego</h3>
+                                <p>R$12,90 / UN</p>
+                                
+                                <label>Unidade:</label>
+                                <input type="number" id="fruta-pessego" class="produtounit" name="Pêssego" min="1" value="0">
+                            </div>
+                            <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-pessego'))">Adicionar à lista</button>
+                        </div>
+                    </div>
+                </div>
                     <div class="product-card">
                         <div>
                             <img src="css/img-compras/horta/mudaAlface.png" alt="">
@@ -184,8 +267,7 @@
                                 <div>
                                     <h3>Muda Alface</h3>
                                     <p>R$0,50 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudaalface" class="produtounit" name="Muda Alface" min="1" value="0">
                                 </div>
@@ -193,6 +275,17 @@
                             </div>
                         </div>
                     </div>
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <div class="carousel-item " >
+                <div id="catalog-slider">
                     <div class="product-card">
                         <div>
                             <img src="css/img-compras/horta/mudaBeterraba.png" alt="">
@@ -200,8 +293,7 @@
                                 <div>
                                     <h3>Muda Beterraba</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudabeterraba" class="produtounit" name="Muda Beterraba" min="1" value="0">
                                 </div>
@@ -216,8 +308,7 @@
                                 <div>
                                     <h3>Muda Cenoura</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudacenoura" class="produtounit" name="Muda Cenoura" min="1" value="0">
                                 </div>
@@ -232,8 +323,7 @@
                                 <div>
                                     <h3>Muda Couve</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudacouve" class="produtounit" name="Muda Couve" min="1" value="0">
                                 </div>
@@ -248,8 +338,7 @@
                                 <div>
                                     <h3>Muda Jilo</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                   
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudajilo" class="produtounit" name="Muda Jilo" min="1" value="0">
                                 </div>
@@ -264,8 +353,7 @@
                                 <div>
                                     <h3>Muda Pimenta</h3>
                                     <p>R$3,00 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudapimenta" class="produtounit" name="Muda Pimenta" min="1" value="0">
                                 </div>
@@ -280,8 +368,7 @@
                                 <div>
                                     <h3>Muda Pimentão</h3>
                                     <p>R$2,50 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudapimentao" class="produtounit" name="Muda Pimentão" min="1" value="0">
                                 </div>
@@ -289,10 +376,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="carousel-item " >
-                <div id="catalog-slider">
                     <div class="product-card">
                         <div>
                             <img src="css/img-compras/horta/mudaQuiabo.png" alt="">
@@ -300,8 +383,7 @@
                                 <div>
                                     <h3>Muda Quiabo</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudaquiabo" class="produtounit" name="Muda Quiabo" min="1" value="0">
                                 </div>
@@ -316,8 +398,7 @@
                                 <div>
                                     <h3>Muda Repolho</h3>
                                     <p>R$0,70 / UN</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
+                                    
                                     <label>Unidade:</label>
                                     <input type="number" id="fruta-mudarepolho" class="produtounit" name="Muda Repolho" min="1" value="0">
                                 </div>
@@ -325,102 +406,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/banana.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Banana Prata</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/mango.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Manga Espada</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/pitahaya.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Pitahaya</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/lemon.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Limão Siciliano</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/strawberry.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Morango</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div>
-                            <img src="fruits/pear.png" alt="">
-                            <div class="home-list-wrapper">
-                                <div>
-                                    <h3>Pera</h3>
-                                    <p>R$3,50 / KG</p>
-                                    <!-- <label>KG:</label>
-                                    <input type="number" class="produtokg" name="Mamão" min="0.00" step="0.25" value="0.00"><br> -->
-                                    <label>Unidade:</label>
-                                    <input type="number" id="fruta-banana" class="produtounit" name="Mamão" min="1" value="0">
-                                </div>
-                                <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -433,8 +419,7 @@
             </button>
         </div>
         
-    </div>
-    
+ 
 
     <div id="modal-list" class="modal-active">
         <div id="close-list"></div>

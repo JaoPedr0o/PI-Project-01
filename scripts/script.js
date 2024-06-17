@@ -29,4 +29,6 @@ modalInfoBtn.addEventListener("click", function () {
   modalInfo.classList.toggle("modal-active")
 })
 
+// Em script1.js
+console.log('script1.js carregado');
 

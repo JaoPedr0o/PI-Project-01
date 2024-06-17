@@ -199,6 +199,7 @@ a#open-list {
 
     .carousel-inner {
         padding: 0 1rem;
+        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
     }
 
     .carousel-control-next, .carousel-control-prev {
@@ -242,13 +243,8 @@ a#open-list {
         padding: 1rem;
         display: flex;
         justify-content: center;
-        background-color: var(--white);
         width: 17rem;
         height: 28rem;
-        border-radius: 0.2rem; 
-        /* offset-x | offset-y | blur-radius | spread-radius | color */
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-        border: 1px solid #F7F7F7;
     }
 
     .product-card>div {
@@ -960,7 +956,7 @@ a#open-list {
     .carousel-inner {
         padding: 0 1rem;
         padding: 0 1rem;
-        background-image: url(img-compras/mercadinho/shelfMercadoNADA.png);
+        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
         background-position: center;
         height: 100%;
     }
@@ -1007,13 +1003,11 @@ a#open-list {
         padding: 1rem;
         display: flex;
         justify-content: center;
-        background-color: var(--white);
         width: 23%;
         height: 30rem;
-        border-radius: 0.2rem; 
-        /* offset-x | offset-y | blur-radius | spread-radius | color */
-        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
-        border: 1px solid #F7F7F7;
+
+        
+  
     }
 
     .product-card>div {
@@ -1773,7 +1767,7 @@ a#open-list {
 
     .carousel-inner {
         padding: 0 1rem;
-        background-image: url(img-compras/mercadinho/shelfMercadoNADA.png);
+        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
         background-position: center;
     }
 
