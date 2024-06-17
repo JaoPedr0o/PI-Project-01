@@ -15,7 +15,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" type="text/css" href="rooms.css">
-    <link rel="stylesheet" type="text/css" href="estilo.css">
 
 </head>
 <body>
@@ -413,6 +412,9 @@
         
         <div id="modal-list" class="modal-active">
             <div id="close-list"></div>
+            <div id="modal-info" class="modal-active">
+                <p>"Prezado cliente, gostaríamos de informar que os preços mostrados em nosso site são estimativas baseadas no peso médio dos produtos selecionados. Por sermos uma frutaria que vende itens frescos e variáveis em peso, o valor total apresentado no carrinho pode diferir do valor final após a pesagem exata dos produtos. Estamos comprometidos em garantir a melhor precisão possível em nossas transações, e qualquer variação no preço será devidamente ajustada no momento da coleta ou entrega dos produtos. Para mais informações ou esclarecimentos, estamos à disposição. Agradecemos pela compreensão."</p>
+            </div>
             <div id="modal-content">
                 <div id="modal-header">
                     <h1>SUA LISTA DE COMPRAS</h1>
@@ -432,11 +434,11 @@
                 <div id="calc_section">
                     <div id="list_info">
                         <h4 id="total">TOTAL ESTIMADO: R$0</h4>
-                        <img src="icons/info-icon-white.svg" width="30px" height="30px" alt="Informação sobre as ações da lista">
+                        <img src="icons/info-icon-white.svg" id="modal-info-btn" width="30px" height="30px" alt="Informação sobre as ações da lista">
                     </div>
                     <div id="list_action_buttons">
                         <button class="green-button">WhatsApp</button>
-                        <button class="blue-button">E-mail</button>
+                        <button class="blue-button" id="pdf-generator">Gerar PDF</button>
                         <button class="red-button" onclick="clearList()">Limpar</button>
                     </div>
                 </div>

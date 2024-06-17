@@ -1,6 +1,6 @@
 //Declaração de Variáveis
 let modal = document.getElementById("modal-list")
-let btOpenList = document.getElementsByClassName("open-list")
+let btOpenList = document.getElementById("open-list")
 let btCloseList = document.getElementById("close-list")
 let headerBanner =  document.getElementById("header-banner")
 let body = document.querySelector("body")
@@ -10,12 +10,10 @@ let modalInfo = document.getElementById("modal-info")
 
 
 //Abertura e fechamento da modal
-btOpenList.forEach(element => {
-  element.addEventListener("click", function () {
+btOpenList.addEventListener("click", function () {
     modal.classList.remove("modal-active")
     body.style.overflow = "hidden"
-  })
-});
+})
 
 
 btCloseList.addEventListener("click", function () {
@@ -29,6 +27,5 @@ modalInfoBtn.addEventListener("click", function () {
   modalInfo.classList.toggle("modal-active")
 })
 
-// Em script1.js
-console.log('script1.js carregado');
+
 

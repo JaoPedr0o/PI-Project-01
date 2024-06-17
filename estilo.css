@@ -202,7 +202,7 @@ main {
 .carousel-control-next, .carousel-control-prev {
     position: absolute;
     display: flex;
-    z-index: -10;
+    z-index: 1;
     align-items: center;
     justify-content: center;
     align-self: flex-end;
@@ -410,6 +410,10 @@ main {
     padding: 1rem;
     text-align: justify;
     font-weight: bold;
+}
+
+#modal-info-btn {
+    cursor: pointer;
 }
 
 /* Título da modal */

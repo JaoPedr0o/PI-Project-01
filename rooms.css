@@ -1,11 +1,13 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
+    
     font-size: 10px;
     font-family: "Poppins", sans-serif;
 }
 
+/* Formatações Gerais */
 :root {
     --common-gray: #515052;
     --lightgray: #D9D9D9;
@@ -15,15 +17,547 @@
     --green: #2eff4a;
     --black: #000000;
     --button-hover: #222222;
+
+    
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center !important;
+    overflow-x: hidden !important;
+    width: 100vw;
+    
+}
+
+
+.content {
+    min-width: 30rem;
+    max-width: 47rem;
+    padding: 0rem 1rem;
+}
+
+/* Estilização geral: navbar */
+nav   {
+    height: auto;
+}
+
+.navbar-nav{
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    font-weight: 700;
+    color: var(--black);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar>.container-fluid>.navbar-brand {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.navbar>.container-fluid>button {
+    outline: none;
+    border: none;
+}
+
+.navbar-nav .nav-item {
+    padding: 0.5rem 2rem;
+    border-radius: 0.2rem;
+}
+
+.navbar-nav .nav-item .nav-link{
+    font-size: 1.6rem;
+}
+
+.navbar-nav .nav-item .nav-link .active{
+    font-size: 1.6rem;
+    color: red;
 }
 
 #cart-icon {
-    background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+    background-image: url(icons/carrinho-de-compras.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 2.5rem;
     height: 2.5rem;
+}
+
+.navbar-default .navbar-toggle .navbar-toggler-icon {
+    font-weight: bold;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+
+
+/* Estilização da apresentação da compra interativa */
+#game-present{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+    width: 100%;
+    height: 45rem;
+}
+
+#game-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-image: url(banners/img-presentation.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.2rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#game-view div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    bottom: 1rem;
+    right: 1rem;
+    width: 55%;
+    height: 40%;
+    background-color: #000000b4;
+    color: var(--white);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    font-weight: 500;
+}
+
+#game-info {
+    position: relative;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-image: url(banners/game-exemple.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-info .white-button {
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    bottom: 1rem;
+    left: 1rem;
+    position: absolute;
+}
+
+#game-info .white-button div {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(icons/game-control.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-info .white-button:hover div {
+    width: 3rem;
+    height: 3rem;
+    background-image: url(icons/game-control-white.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#game-info .white-button a {
+    color: var(--black);
+    text-decoration: none;
+}
+
+#game-info .white-button:hover a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+#game-info .white-button p {
+    margin: 0;
+}
+
+
+/* Estilização geral: catálogo de produtos */
+.carousel-control-next-icon {
+    background-image: url(icons/next-icon.png) !important;
+}
+.carousel-control-prev-icon {
+    background-image: url(icons/prev-icon.png) !important;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    display: flex;
+    z-index: -10;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+    width: 20% !important;
+    height: 3.5%;
+    padding: 0;
+    text-align: center;
+    border: 0;
+    opacity: 100 !important;
+    transition: opacity .15s ease;
+    background-color: var(--white) !important;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#carouselExample {
+    background: linear-gradient(180deg, var(--white), var(--lightgray));
+}
+
+.carousel-inner {
+    padding: 0rem 0.5rem;
+}
+
+#catalog-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 0.5rem;
+    overflow-x: hidden;
+    border-radius: 0.2rem;
+    
+}
+
+.product-card {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 48%;
+    height: 25rem;
+    border-radius: 0.2rem; 
+    /* offset-x | offset-y | blur-radius | spread-radius | color */
+}
+
+.product-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.product-card>div button {
+    margin: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.product-card>div button:hover {
+    margin: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.product-card div div input {
+    margin: 0.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.product-card > div img {
+    margin-top: 1rem;
+    width: 7rem;
+    height: 7rem;
+    transition: all 0.3s;
+    /* border-radius: 50%; */
+}
+
+.product-card > div div {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0rem 0rem 0rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: auto;
+    gap: 0px !important;
+}
+
+.product-card > div div p {
+    margin: 1px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    background-color: var(--lightgray);
+    padding: 0.2rem 0.5rem;
+    border-radius: 0.2rem;
+    align-self: flex-start;
+    width: 100%;
+}
+
+.product-card > div div input {
+    border-radius: 0.2rem;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid var(--lightgray);
+}
+
+.product-card > div div h3 {
+    font: bold;
+    font-size: 1.2rem;
+}
+
+/* Estilização da seção de contato. */
+#contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+#contact-side > div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+#contact-side > div iframe {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    width: 15rem;
+    min-width: 25rem;
+    height: 30%;
+    border-radius: 0.2rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid #533314 !important;
+}
+
+#contact-box {
+    width: 100%;
+    height: 65rem;
+    background-image: url(banners/img-contact.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Formatação da modal da lista de compras */
+#modal-list {
+    top: 0px;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #00000089;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 4;
+}
+
+#modal-content {
+    position: relative;
+    background-color: var(--white);
+    width: 95%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 2rem;
+}
+
+#modal-header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#modal-info {
+    position: absolute;
+    background-color: var(--white);
+    width: 400px;
+    height: 220px;
+    bottom: 15rem;
+    right: 2rem;
+    z-index: 4;
+    border-radius: 0.2rem;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 2px solid #533314 !important;
+    
+}
+
+#modal-info p {
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: justify;
+    font-weight: bold;
+}
+
+#modal-info-btn {
+    cursor: pointer;
+}
+
+/* Título da modal */
+#modal-content h1 {
+    font-size: 2.4rem;
+    text-align: center;
+    line-height: 0;
+    margin: 0;
+}
+
+#close-list {
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+}
+
+#modal-content ul {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #D9D9D950;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+#empty-list {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    width: 90%;
+    height: 30rem;
+    top: 50;
+}
+
+.empty-list-hidden {
+    visibility: hidden;
+}
+
+#modal-content ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    width: 96%;
+    height: 5rem;
+    border: 0.1rem solid var(--common-gray);
+    list-style: none;
+    border-radius: 0.2rem;
+    font-size: 1.3rem;
+}
+
+/* Botão de remover item da lista */
+#modal-content ul li button {
+    color: var(--white);
+    background-color: var(--red);
+    padding: 0.5rem;
+    border: 0.1rem solid var(--red);
+    border-radius: 0.2rem;
+    transition: color,background 0.2s;
+}
+#modal-content ul li button:hover {
+    color: var(--red);
+    background-color: var(--white);
+    padding: 0.5rem;
+    border: 0.1rem solid var(--red);
+    border-radius: 0.2rem;
+}
+
+/* Classe que o js usa para abrir e fechar a modal */
+.modal-active {
+    visibility: hidden;
+}
+
+#calc_section {
+    background-color: #D9D9D950;
+    color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-be;
+    height: 11rem !important;
+    width: 90%;
+}
+
+#calc_section #list_info {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--black);
+    width: 100%;
+    
+}
+
+#calc_section h4 {
+    font-size: 2rem;
+    width: 100%;
+    color: var(--white);
+    background-color: var(--black);
+    height: 50%;
+} 
+
+#calc_section #list_action_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#calc_section #list_action_buttons button {
+    width: 15rem;
+    height: 4rem;
+}
+
+/* Estilização do rodapé */
+footer {
+    width: 100vw;
+    height: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    background-color: var(--lightgray);
+}
+
+footer > div {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer > div > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.social-icon{
+    cursor: pointer;
 }
 
 a#open-list {
@@ -32,6 +566,9 @@ a#open-list {
     right: 1rem;
     z-index: 60;
 }
+
+/* Classe que o js usa para abrir e fechar a modal */
+
 
 @media (min-width: 767px)  and (max-width: 990px) {
     body {
@@ -754,7 +1291,9 @@ a#open-list {
         height: 4rem;
     }
     
-    
+    .modal-active {
+        visibility: hidden;
+    }
 }
 
 
@@ -1593,8 +2132,6 @@ a#open-list {
         align-items: center;
         flex-direction: column;
         justify-content: center;
-        height: 100vh;
-        background-color: #ffffff;
     }
 
     .content {
@@ -2217,3 +2754,130 @@ a#open-list {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Botões */
+.black-button {
+    background-color: var(--black);
+    color: var(--white);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    border: 0.1rem solid black;
+    font-weight: bold;
+}
+
+.black-button:hover {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+}
+
+.white-button {
+    background-color: var(--white);
+    text-align: center;
+    color: var(--black);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    border: 0.1rem solid var(--black);
+}
+
+.white-button:hover {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--white);
+}
+
+.green-button {
+    background-color: var(--green);
+    text-align: center;
+    color: var(--white);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    border: 0.1rem solid var(--white);
+}
+
+.green-button:hover {
+    background-color: var(--white);
+    color: var(--green);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--green);
+}
+
+.red-button {
+    background-color: var(--red);
+    text-align: center;
+    color: var(--white);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    border: 0.1rem solid var(--white);
+}
+
+.red-button:hover {
+    background-color: var(--white);
+    color: var(--red);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--red);
+}
+
+.blue-button {
+    background-color: var(--blue);
+    text-align: center;
+    color: var(--white);
+    width: auto;
+    padding: 0.5rem;
+    height: auto;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    font-weight: bold;
+    border: 0.1rem solid var(--white);
+}
+
+.blue-button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    border-radius: 0.2rem;
+    cursor: pointer;
+    border: 0.1rem solid var(--blue);
+}
