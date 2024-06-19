@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +36,7 @@
                                     <h3>Coxa</h3>
                                     <p>R$42,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-coxa" class="produtounit" name="Coxa" min="1" value="0">
+                                    <input type="number" id="fruta-coxa" class="produtounit" name="Coxa" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coxa'))">Adicionar à lista</button>
                             </div>
@@ -49,7 +50,7 @@
                                     <h3>Peixe</h3>
                                     <p>R$50,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-peixe" class="produtounit" name="Peixe" min="1" value="0">
+                                    <input type="number" id="fruta-peixe" class="produtounit" name="Peixe" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-peixe'))">Adicionar à lista</button>
                             </div>
@@ -63,7 +64,7 @@
                                     <h3>Asa Frango</h3>
                                     <p>R$45,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-asafrango" class="produtounit" name="Asa Frango" min="1" value="0">
+                                    <input type="number" id="fruta-asafrango" class="produtounit" name="Asa Frango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-asafrango'))">Adicionar à lista</button>
                             </div>
@@ -77,7 +78,7 @@
                                     <h3>Costelinha</h3>
                                     <p>R$55,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-costelinha" class="produtounit" name="Costelinha" min="1" value="0">
+                                    <input type="number" id="fruta-costelinha" class="produtounit" name="Costelinha" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-costelinha'))">Adicionar à lista</button>
                             </div>
@@ -91,7 +92,7 @@
                                     <h3>Frango</h3>
                                     <p>R$50,00 / UN</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-frango" class="produtounit" name="Frango" min="1" value="0">
+                                    <input type="number" id="fruta-frango" class="produtounit" name="Frango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-frango'))">Adicionar à lista</button>
                             </div>
@@ -105,7 +106,7 @@
                                     <h3>Peito de Frango</h3>
                                     <p>R$50,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-peitofrango" class="produtounit" name="Peito Frango" min="1" value="0">
+                                    <input type="number" id="fruta-peitofrango" class="produtounit" name="Peito Frango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-peitofrango'))">Adicionar à lista</button>
                             </div>
@@ -119,7 +120,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-morango'))">Adicionar à lista</button>
                             </div>
@@ -133,7 +134,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-pera'))">Adicionar à lista</button>
                             </div>
@@ -151,7 +152,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -165,7 +166,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -179,7 +180,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -193,7 +194,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -207,7 +208,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -221,7 +222,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -235,7 +236,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -249,7 +250,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -267,7 +268,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -281,7 +282,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -295,7 +296,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -309,7 +310,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -323,7 +324,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -337,7 +338,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -351,7 +352,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>
@@ -365,7 +366,7 @@
                                     <h3></h3>
                                     <p>R$0,00 / KG</p>
                                     <label>Unidade:</label>
-                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="1" value="0">
+                                    <input type="number" id="fruta-morango" class="produtounit" name="Morango" min="0.5" value="0">
                                 </div>
                                 <button class="black-button" onclick="adicionarCompra(document.getElementById('fruta-coco'))">Adicionar à lista</button>
                             </div>

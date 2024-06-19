@@ -383,14 +383,15 @@ window.addEventListener("load", function () {
 
 //Função para mandar lista pelo wpp
 function enviarWpp(){
-    var numTelefone = "+5534992181999";
+    var numTelefone = "+5534999132804";
 
-    var lista = lista.innerHTML
+    var nome = productList.map(produto => produto.name)
+    var preco = productList.map(produto => produto.price)
 
     var url = "https://wa.me/" + numTelefone + "?text="
     
-    +"Lista:"+lista.innerHTML+"%0a"
-    +"Lista de compras do cliente <cliente>";
+    +"-"+nome+"%0a\n"
+    +"-"+preco+"%0a\n"
 
     window.open(url, '_blank').focus();
 }
