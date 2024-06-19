@@ -454,13 +454,12 @@ window.addEventListener("load", function () {
 function enviarWpp(){
     var numTelefone = "+5534999132804";
 
-    var nome = productList.map(produto => produto.name)
-    var preco = productList.map(produto => produto.price)
+    let list = document.getElementById("lista")
+    var nome = list.innerHTML
 
     var url = "https://wa.me/" + numTelefone + "?text="
     
     +"-"+nome+"%0a\n"
-    +"-"+preco+"%0a\n"
 
     window.open(url, '_blank').focus();
 }
