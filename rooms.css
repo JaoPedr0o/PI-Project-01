@@ -219,6 +219,9 @@ main {
 
 #carouselExample {
     background: linear-gradient(180deg, var(--white), var(--lightgray));
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
 .carousel-inner {
