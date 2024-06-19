@@ -381,6 +381,20 @@ window.addEventListener("load", function () {
     
 })
 
+//Função para mandar lista pelo wpp
+function enviarWpp(){
+    var numTelefone = "+5534992181999";
+
+    var lista = lista.innerHTML
+
+    var url = "https://wa.me/" + numTelefone + "?text="
+    
+    +"Lista:"+lista.innerHTML+"%0a"
+    +"Lista de compras do cliente <cliente>";
+
+    window.open(url, '_blank').focus();
+}
+
 //Funçaõ que gera PDF
 const btnGenerate = document.querySelector("#pdf-generator");
 
