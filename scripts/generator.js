@@ -450,6 +450,21 @@ window.addEventListener("load", function () {
     
 })
 
+//Função para mandar lista pelo wpp
+function enviarWpp(){
+    var numTelefone = "+5534999132804";
+
+    var nome = productList.map(produto => produto.name)
+    var preco = productList.map(produto => produto.price)
+
+    var url = "https://wa.me/" + numTelefone + "?text="
+    
+    +"-"+nome+"%0a\n"
+    +"-"+preco+"%0a\n"
+
+    window.open(url, '_blank').focus();
+}
+
 //Funçaõ que gera PDF
 const btnGenerate = document.querySelector("#pdf-generator");
 
