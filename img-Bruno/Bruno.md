@@ -1,1 +1,0 @@
-# Colocar as Imagens nesta pasta ("img-Bruno")
