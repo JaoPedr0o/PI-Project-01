@@ -182,6 +182,67 @@ const productPriceList = [
         "price": 10.00,
     },
     {
+        "name": "Pinga 51",
+        "price": 20.00,
+    },
+    {
+        "name": "Bolacha",
+        "price": 4.00,
+    },
+    {
+        "name": "Café",
+        "price": 40.00,
+    },
+    {
+        "name": "Chocolate",
+        "price": 5.00,
+    },
+    {
+        "name": "Extrato de Tomate",
+        "price": 7.00,
+    },
+    {
+        "name": "Jamel",
+        "price": 10.00,
+    },
+    {
+        "name": "Leite",
+        "price": 10.00,
+    },
+    {
+        "name": "Mineiro",
+        "price": 8.00,
+    },
+    {
+        "name": "Miojo",
+        "price": 2.50,
+    },
+    {
+        "name": "Nutella",
+        "price": 15.00,
+    },
+    {
+        "name": "Pringles",
+        "price": 10.00,
+    },
+    {
+        "name": "Salgadinho",
+        "price": 5.50,
+    },
+    {
+        "name": "Toddy",
+        "price": 13.00,
+    },
+    {
+        "name": "Vinho",
+        "price": 20.00,
+    },
+    {
+        "name": "Coca-Cola",
+        "price": 5.00,
+    },
+
+    {
         "name": "Coxa",
         "price": 42.00,
     },
@@ -204,6 +265,14 @@ const productPriceList = [
     {
         "name": "Peito Frango",
         "price": 50.00,
+    },
+    {
+        "name": "Barrigada",
+        "price": 55.00,
+    },
+    {
+        "name": "Lombo",
+        "price": 55.00,
     },
 
     

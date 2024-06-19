@@ -736,8 +736,9 @@ a#open-list {
 
     .carousel-inner {
         padding: 0 1rem;
-        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
+
     }
+    
 
     .carousel-control-next, .carousel-control-prev {
         position: absolute;
@@ -756,8 +757,10 @@ a#open-list {
         background-color: var(--white) !important;
         box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2);
         border-radius: 0.2rem;
+   
     }
     .carousel-control-prev:hover {
+
         opacity: .70 !important;
     }
     .carousel-control-next:hover {
@@ -1294,6 +1297,7 @@ a#open-list {
     .modal-active {
         visibility: hidden;
     }
+
 }
 
 
@@ -1495,9 +1499,6 @@ a#open-list {
     .carousel-inner {
         padding: 0 1rem;
         padding: 0 1rem;
-        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
-        background-position: center;
-        height: 100%;
     }
 
     .carousel-control-next, .carousel-control-prev {
@@ -2304,7 +2305,6 @@ a#open-list {
 
     .carousel-inner {
         padding: 0 1rem;
-        background-image: url(css/img-compras/mercadinho/shelfMercadoNADA.png);
         background-position: center;
     }
 
