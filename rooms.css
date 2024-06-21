@@ -2196,7 +2196,7 @@ a#open-list {
     }
 
     #cart-icon {
-        background;
+        background-image: url(icons/carrinho-de-compras.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
