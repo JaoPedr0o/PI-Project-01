@@ -82,12 +82,15 @@ nav   {
 }
 
 #cart-icon {
+    padding: 2rem;
     background-image: url(icons/carrinho-de-compras.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     width: 2.5rem;
     height: 2.5rem;
+    margin: 2rem;
+    z-index: 0 !important;
 }
 
 .navbar-default .navbar-toggle .navbar-toggler-icon {
@@ -247,6 +250,7 @@ main {
     width: 48%;
     height: 25rem;
     border-radius: 0.2rem; 
+    margin: 5rem 0rem;
     /* offset-x | offset-y | blur-radius | spread-radius | color */
 }
 
@@ -366,7 +370,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    z-index: 4;
+    z-index: 4 !important;
 }
 
 #modal-content {
@@ -625,7 +629,7 @@ a#open-list {
     }
 
     #cart-icon {
-        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background-image: url(icons/carrinho-de-compras.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -727,10 +731,10 @@ a#open-list {
     
     /* Estilização geral: catálogo de produtos */
     .carousel-control-next-icon {
-        background-image: url(/Site/assets/icons/next-icon.png) !important;
+        background-image: url(icons/next-icon.png) !important;
     }
     .carousel-control-prev-icon {
-        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+        background-image: url(icons/prev-icon.png) !important;
     }
 
     #carouselExample {
@@ -1387,7 +1391,7 @@ a#open-list {
     }
 
     #cart-icon {
-        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background-image: url(icons/carrinho-de-compras.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -1489,10 +1493,10 @@ a#open-list {
     
     /* Estilização geral: catálogo de produtos */
     .carousel-control-next-icon {
-        background-image: url(/Site/assets/icons/next-icon.png) !important;
+        background-image: url(icons/next-icon.png) !important;
     }
     .carousel-control-prev-icon {
-        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+        background-image: url(icons/prev-icon.png) !important;
     }
 
     #carouselExample {
@@ -2192,7 +2196,7 @@ a#open-list {
     }
 
     #cart-icon {
-        background-image: url(/Site/assets/icons/carrinho-de-compras.png);
+        background;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -2295,10 +2299,10 @@ a#open-list {
     
     /* Estilização geral: catálogo de produtos */
     .carousel-control-next-icon {
-        background-image: url(/Site/assets/icons/next-icon.png) !important;
+        background-image: url(icons/next-icon.png) !important;
     }
     .carousel-control-prev-icon {
-        background-image: url(/Site/assets/icons/prev-icon.png) !important;
+        background-image: url(icons/prev-icon.png) !important;
     }
 
     #carouselExample {

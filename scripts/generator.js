@@ -307,6 +307,7 @@ function adicionarCompra(product) {
 
     //Passa o valor do produto para tipo float
     let productPrice = parseFloat((productData.price)*product.value)
+    console.log(productPrice.toFixed(2))
 
     //Atribui à variável productName o nome do produto extraido do input
     let productName = product.name
@@ -451,17 +452,18 @@ window.addEventListener("load", function () {
 })
 
 //Função para mandar lista pelo wpp
-function enviarWpp(){
-    var numTelefone = "+5534999132804";
+function enviarWpp() {
+alert("Ao entrar na aba de envio clique em 'Iniciar Conversa'")
+let numTelefone = "+5534999132804";
+let mensagem = "Sua lista de compras:%0a%0a";
+mensagem += productList.map(produto => 
+    `-> ${produto.name} - Preço: ${produto.price} - Quantidade: ${produto.value}`
+).join('%0a');
 
-    let list = document.getElementById("lista")
-    var nome = list.innerHTML
+mensagem.includes
+let url = `https://wa.me/${numTelefone}?text=${mensagem}`;
 
-    var url = "https://wa.me/" + numTelefone + "?text="
-    
-    +"-"+nome+"%0a\n"
-
-    window.open(url, '_blank').focus();
+window.open(url, '_blank').focus();
 }
 
 //Funçaõ que gera PDF

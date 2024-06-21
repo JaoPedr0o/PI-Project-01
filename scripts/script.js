@@ -13,6 +13,7 @@ let modalInfo = document.getElementById("modal-info")
 btOpenList.addEventListener("click", function () {
     modal.classList.remove("modal-active")
     body.style.overflow = "hidden"
+    btOpenList.style.visibility =  "hidden"
 })
 
 
@@ -20,6 +21,7 @@ btCloseList.addEventListener("click", function () {
   modal.classList.add("modal-active")
   body.style.overflow = "visible"
   body.style.overflowX = "hidden"
+  btOpenList.style.visibility =  "visible"
 })
 
 
